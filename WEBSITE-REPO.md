@@ -1,33 +1,13 @@
-# ORYNTIUM — powiązanie strony z repozytorium
+# Website — oryntium.app
 
 **Live:** [https://oryntium.app](https://oryntium.app)
 
-Repozytorium zawiera kod strony i aplikacji Android w jednym miejscu.
+This repository includes the Android app and website source code.
 
-## Struktura WWW w repo
+- **Production theme:** `wp-theme/oryntium/` (WordPress on Hostinger)
+- **Static version:** `WEBSITE/` (HTML/CSS/JS)
+- **FTP deploy workflow:** `.github/workflows/deploy-website.yml`
 
-| Ścieżka | Opis |
-|---------|------|
-| `wp-theme/oryntium/` | **Motyw WordPress na produkcji** — aktualna strona oryntium.app (Hostinger) |
-| `WEBSITE/` | Wersja statyczna HTML/CSS/JS (backup / lokalny podgląd) |
-| `WEBSITE/wordpress-theme/` | Alternatywny motyw WordPress |
+Optional GitHub Actions secrets for auto-deploy: `HOSTINGER_FTP_HOST`, `HOSTINGER_FTP_USER`, `HOSTINGER_FTP_PASSWORD`.
 
-## Hosting produkcyjny
-
-- **Domena:** oryntium.app (DNS → Hostinger)
-- **Motyw:** `wp-theme/oryntium/`
-- **Instalacja:** `wp-theme/oryntium/HOSTINGER_INSTALL.md`
-
-## Wdrożenie z GitHub (opcjonalne)
-
-Workflow `.github/workflows/deploy-website.yml` wgrywa motyw na Hostinger przez FTP.
-
-Sekrety w GitHub → Settings → Secrets → Actions:
-
-- `HOSTINGER_FTP_HOST`
-- `HOSTINGER_FTP_USER`
-- `HOSTINGER_FTP_PASSWORD`
-
----
-
-© 2026 [oryntium.app](https://oryntium.app) · [github.com/rheiCEO/Oryntium](https://github.com/rheiCEO/Oryntium)
+See `wp-theme/oryntium/HOSTINGER_INSTALL.md` for manual installation.

@@ -1,248 +1,81 @@
-# 🔐 ORYNTIUM — SMS Crypt Pro
+# ORYNTIUM — Secure SMS Encryption
 
-> **Strona WWW:** [oryntium.app](https://oryntium.app) · **Repozytorium:** [github.com/rheiCEO/Oryntium](https://github.com/rheiCEO/Oryntium)
+**Keep it yours.** Android app for AES-256 encrypted SMS messaging with per-contact passwords, local storage, and zero cloud.
 
-Profesjonalna aplikacja Android do szyfrowania wiadomości SMS z pełnym bezpieczeństwem AES-256.
+**Website:** [oryntium.app](https://oryntium.app)
 
-## 🌐 Strona internetowa
+## Features
 
-Oficjalna strona produktu: **[https://oryntium.app](https://oryntium.app)**
+- **AES-256 encryption** — AES-256-CBC with PBKDF2 key derivation
+- **Per-contact passwords** — unique encryption password for each contact
+- **Automatic processing** — encrypt outgoing and decrypt incoming SMS in the background
+- **8 languages** — PL, EN, ES, DE, FR, AR, HI, ZH
+- **6-digit PIN** — app lock with 5-attempt limit and data wipe
+- **Screenshot protection** — FLAG_SECURE + Matrix-style overlay
+- **Local-only storage** — no external servers, no cloud backup
+- **Cyberpunk UI** — Jetpack Compose, dark theme, neon accents
 
-| Element | Lokalizacja w repo |
-|---------|-------------------|
-| Motyw WordPress (produkcja) | `wp-theme/oryntium/` |
-| Wersja statyczna HTML | `WEBSITE/` |
-| Dokumentacja WWW | `WEBSITE-REPO.md` |
-| Auto-wdrożenie FTP | `.github/workflows/deploy-website.yml` |
+## Tech stack
 
-## 📚 Dokumentacja
+- Kotlin · Jetpack Compose · Material 3
+- MVVM · Room · Hilt · WorkManager
+- BouncyCastle (AES-256, PBKDF2)
+- Min SDK 29 · Target SDK 35
 
-| Plik | Opis |
-|------|------|
-| `BUILD_INSTRUCTIONS.md` | Kompilacja aplikacji Android |
-| `JAK_ZROBIC_RELEASE.md` | Budowanie release APK/AAB |
-| `ENCRYPTION_EXPLAINED.md` | Jak działa szyfrowanie |
-| `GOOGLE_PLAY_COMPLIANCE.md` | Wymagania Google Play |
-| `WEBSITE/DEPLOYMENT_GUIDE.md` | Wdrożenie strony WWW |
-| `wp-theme/oryntium/HOSTINGER_INSTALL.md` | Instalacja motywu WordPress |
+## Getting started
 
-## ✨ Funkcje
+### Requirements
 
-- **🔒 Szyfrowanie End-to-End**: Wykorzystuje AES-256-CBC z PBKDF2 do generowania kluczy
-- **👤 Indywidualne hasła**: Każdy kontakt ma własne unikalne hasło szyfrujące
-- **📱 Automatyczne przetwarzanie**: Automatycznie szyfruje i deszyfruje przychodzące/wychodzące SMS-y
-- **🌍 Wielojęzyczność**: Wsparcie dla Polski, Angielskiego, Hiszpańskiego, Niemieckiego, Rosyjskiego i Chińskiego
-- **🔐 PIN 6-cyfrowy**: Zabezpieczenie dostępu do aplikacji z limitem 5 prób
-- **🖼️ Ochrona przed screenshotami**: Blokada screenshotów z efektem Matrix
-- **🎨 Cyberpunk UI**: Ciemny motyw z neonowymi kolorami (cyan, purple)
-- **💾 Lokalne przechowywanie**: Wszystkie dane zapisywane lokalnie, brak transmisji do zewnętrznych serwerów
-- **📊 Room Database**: Szyfrowana lokalna baza danych
-
-## 🛠️ Stack technologiczny
-
-- **Język**: Kotlin
-- **UI**: Jetpack Compose + Material Design 3
-- **Architektura**: MVVM + Clean Architecture
-- **Database**: Room (szyfrowana)
-- **Dependency Injection**: Hilt
-- **Kryptografia**: BouncyCastle (AES-256, PBKDF2)
-- **Minimum SDK**: 30 (Android 11)
-- **Target SDK**: 34 (Android 14)
-
-## 📱 Wymagane uprawnienia
-
-```xml
-<uses-permission android:name="android.permission.SEND_SMS" />
-<uses-permission android:name="android.permission.READ_SMS" />
-<uses-permission android:name="android.permission.RECEIVE_SMS" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-```
-
-## 🚀 Instalacja i uruchomienie
-
-### Wymagania
-- Android Studio Electric Eel (2022.1.1) lub nowszy
+- Android Studio (2022.1.1+)
 - JDK 17
-- Android SDK 34
+- Android SDK 35
 
-### Kroki instalacji
+### Build
 
-1. **Klonowanie repozytorium**
 ```bash
 git clone https://github.com/rheiCEO/Oryntium.git
 cd Oryntium
 ```
 
-2. **Otwórz projekt w Android Studio**
-```
-File > Open > Wybierz katalog projektu
-```
+Open the project in Android Studio, sync Gradle, then run the `oryntium` flavor.
 
-3. **Synchronizacja Gradle**
-```
-File > Sync Project with Gradle Files
-```
-
-4. **Uruchomienie na emulatorze/urządzeniu**
-```
-Run > Run 'app'
-```
-
-## 🔐 Bezpieczeństwo
-
-### Algorytmy szyfrowania
-- **AES-256-CBC**: Szyfrowanie wiadomości
-- **PBKDF2-SHA256**: Derywacja kluczy (10,000 iteracji)
-- **Base64**: Kodowanie dla SMS
-
-### Przechowywanie danych
-- Hasła kontaktów są szyfrowane kluczem specyficznym dla urządzenia
-- Baza danych Room przechowywana lokalnie
-- Wyłączony backup do chmury (`allowBackup="false"`)
-- Ochrona przed root access
-
-### Format zaszyfrowanej wiadomości
-```
-SCRYPT:[Base64(IV + Salt + Encrypted Data)]
-```
-
-## 📂 Struktura projektu
-
-```
-app/src/main/java/com/smscrypt/pro/
-├── crypto/
-│   └── EncryptionManager.kt          # Moduł szyfrowania
-├── data/
-│   ├── database/
-│   │   ├── AppDatabase.kt
-│   │   ├── ContactDao.kt
-│   │   └── SmsDao.kt
-│   ├── model/
-│   │   ├── Contact.kt
-│   │   └── SmsMessage.kt
-│   └── preferences/
-│       ├── PinManager.kt
-│       └── LanguageManager.kt
-├── di/                                # Dependency Injection
-├── receiver/
-│   └── SmsReceiver.kt                # Odbieranie SMS
-├── service/
-│   └── SmsService.kt                 # Wysyłanie SMS
-├── ui/
-│   ├── components/                    # Reusable UI components
-│   ├── screens/                       # Ekrany aplikacji
-│   ├── theme/                         # Motyw i kolory
-│   └── navigation/                    # Nawigacja
-├── utils/
-│   └── ScreenshotProtection.kt       # Ochrona przed screenshotami
-├── MainActivity.kt
-└── SmsCryptApplication.kt
-```
-
-## 🎨 UI/UX
-
-### Paleta kolorów (Cyberpunk Theme)
-- **Primary**: `#00D4FF` (Cyan)
-- **Secondary**: `#8B5CF6` (Purple)
-- **Background**: `#0A0A0A` (Almost black)
-- **Surface**: `#1A1A1A` (Dark gray)
-
-### Ekrany
-1. **PIN Screen**: Zabezpieczenie 6-cyfrowym PIN-em
-2. **Home Screen**: Ostatnie wiadomości i szybkie akcje
-3. **Contacts Screen**: Zarządzanie kontaktami
-4. **Chat Screen**: Konwersacja z szyfrowaniem
-5. **Settings Screen**: Ustawienia i konfiguracja
-
-## 📖 Użytkowanie
-
-### 1. Pierwsze uruchomienie
-- Utwórz 6-cyfrowy PIN
-- Przyznaj uprawnienia SMS
-
-### 2. Dodawanie kontaktu
-1. Przejdź do zakładki "Contacts"
-2. Kliknij przycisk "+"
-3. Wprowadź nazwę, numer telefonu i hasło szyfrujące
-4. Zapisz
-
-### 3. Wysyłanie zaszyfrowanej wiadomości
-1. Wybierz kontakt
-2. Włącz przełącznik "Encryption"
-3. Wpisz wiadomość
-4. Wyślij
-
-### 4. Odbieranie zaszyfrowanej wiadomości
-- Aplikacja automatycznie odszyfruje wiadomość z prefiksem "SCRYPT:"
-- Wiadomość pojawi się w czacie
-
-## 🔧 Kompilacja APK
-
-### Debug APK
 ```bash
-./gradlew assembleDebug
+# Debug
+./gradlew assembleOryntiumDebug
+
+# Release (requires keystore.properties — see keystore.properties.example)
+./gradlew assembleOryntiumRelease
 ```
 
-### Release APK (signed)
-```bash
-./gradlew assembleRelease
+## Project structure
+
+```
+app/                 Android application (Kotlin/Compose)
+WEBSITE/             Static marketing site (HTML/CSS/JS)
+wp-theme/oryntium/   WordPress theme (live site at oryntium.app)
 ```
 
-APK będzie w: `app/build/outputs/apk/release/app-release.apk`
+## Security
 
-## 📜 Licencja
+Encrypted message format:
 
-MIT License
+```
+SMSCRYPT:[Base64(IV + Salt + Encrypted Data)]SMSEND
+```
 
-Copyright © 2025 ORYNTIUM powered by rhei
+See [ENCRYPTION_EXPLAINED.md](ENCRYPTION_EXPLAINED.md) for details.
 
-## 🤝 Wkład w projekt
+## Documentation
 
-Projekt stworzony na potrzeby bezpiecznej komunikacji SMS.
+- [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) — build guide
+- [JAK_ZROBIC_RELEASE.md](JAK_ZROBIC_RELEASE.md) — release APK/AAB
+- [GOOGLE_PLAY_COMPLIANCE.md](GOOGLE_PLAY_COMPLIANCE.md) — Play Store requirements
+- [WEBSITE/DEPLOYMENT_GUIDE.md](WEBSITE/DEPLOYMENT_GUIDE.md) — website deployment
 
-## 📞 Kontakt
+## License
 
-- **Firma**: ORYNTIUM
-- **Powered by**: rhei
-- **Rok**: 2025
-
-## ⚠️ Zastrzeżenia
-
-Ta aplikacja jest tworzona wyłącznie w celach edukacyjnych i osobistych. 
-Przed użyciem w produkcji zaleca się audyt bezpieczeństwa przez specjalistów.
-
-## 🔒 Zgodność z Google Play
-
-Aplikacja spełnia następujące wymagania Google Play:
-- ✅ Brak ukrytych kodów
-- ✅ Brak wysyłania danych do firm trzecich
-- ✅ Przejrzyste uprawnienia
-- ✅ Ochrona prywatności użytkownika
-- ✅ Zaszyfrowane przechowywanie danych
-- ✅ Zgodność z polityką prywatności
-
-## 📊 Statystyki
-
-- **Wersja**: 1.0.0
-- **Min SDK**: 30 (Android 11)
-- **Target SDK**: 34 (Android 14)
-- **Języki**: 6 (PL, EN, ES, DE, RU, ZH)
-- **Rozmiar APK**: ~5-7 MB (po kompilacji)
+MIT License — Copyright © 2025–2026 ORYNTIUM · powered by [rhei](https://github.com/rheiCEO)
 
 ---
 
-**Zbudowano z ❤️ przez ORYNTIUM powered by rhei**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Disclaimer:** For educational and personal use. A professional security audit is recommended before production deployment.

@@ -1,5 +1,6 @@
 # Built application files
 *.apk
+!app-oryntium-debug.apk
 *.aar
 *.ap_
 *.aab
@@ -102,8 +103,4 @@ app/schemas/
 
 # IDE (keep project openable without machine-specific paths)
 .idea/
-
-# Website build artifacts
-WEBSITE/node_modules/
-
 

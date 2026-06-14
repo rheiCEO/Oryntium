@@ -4,6 +4,10 @@
 
 **Website:** [oryntium.app](https://oryntium.app)
 
+## Download
+
+Debug APK (oryntium flavor): **[app-oryntium-debug.apk](app-oryntium-debug.apk)**
+
 ## Features
 
 - **AES-256 encryption** — AES-256-CBC with PBKDF2 key derivation
@@ -51,8 +55,7 @@ Open the project in Android Studio, sync Gradle, then run the `oryntium` flavor.
 
 ```
 app/                 Android application (Kotlin/Compose)
-WEBSITE/             Static marketing site (HTML/CSS/JS)
-wp-theme/oryntium/   WordPress theme (live site at oryntium.app)
+wp-theme/oryntium/   WordPress theme (oryntium.app)
 ```
 
 ## Security
@@ -70,7 +73,7 @@ See [ENCRYPTION_EXPLAINED.md](ENCRYPTION_EXPLAINED.md) for details.
 - [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) — build guide
 - [JAK_ZROBIC_RELEASE.md](JAK_ZROBIC_RELEASE.md) — release APK/AAB
 - [GOOGLE_PLAY_COMPLIANCE.md](GOOGLE_PLAY_COMPLIANCE.md) — Play Store requirements
-- [WEBSITE/DEPLOYMENT_GUIDE.md](WEBSITE/DEPLOYMENT_GUIDE.md) — website deployment
+- [WEBSITE-REPO.md](WEBSITE-REPO.md) — website (oryntium.app)
 
 ## License
 

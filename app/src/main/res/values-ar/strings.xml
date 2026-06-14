@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">ORYNTIUM</string>
+    
+    <!-- PIN Screen -->
+    <string name="enter_pin">أدخل رمز PIN الخاص بك</string>
+    <string name="create_pin">إنشاء رمز PIN مكون من 6 أرقام</string>
+    <string name="confirm_pin">تأكيد رمز PIN الخاص بك</string>
+    <string name="pin_mismatch">رموز PIN غير متطابقة</string>
+    <string name="attempts_remaining">المحاولات المتبقية: %d</string>
+    <string name="data_will_be_deleted">سيتم حذف جميع البيانات بعد %d محاولات فاشلة</string>
+    
+    <!-- Home Screen -->
+    <string name="secure_messaging">رسائل آمنة</string>
+    <string name="quick_sms">SMS</string>
+    <string name="contacts">جهات الاتصال</string>
+    <string name="recent_messages">الرسائل الأخيرة</string>
+    <string name="no_messages_yet">لا توجد رسائل حتى الآن</string>
+    <string name="send_first_message">أرسل رسالتك المشفرة الأولى</string>
+    
+    <!-- Chat Screen -->
+    <string name="encryption_active">التشفير نشط</string>
+    <string name="encryption">التشفير</string>
+    <string name="encrypted_message_hint">رسالة مشفرة…</string>
+    <string name="type_message_hint">اكتب رسالة…</string>
+    <string name="encrypted">مشفر</string>
+    
+    <!-- Contacts Screen -->
+    <string name="search_contacts">البحث عن جهات الاتصال…</string>
+    <string name="no_contacts_yet">لا توجد جهات اتصال حتى الآن</string>
+    <string name="add_first_contact">أضف جهة اتصالك الأولى لبدء المراسلة الآمنة</string>
+    <string name="add_contact">إضافة جهة اتصال</string>
+    <string name="edit_contact">تحرير جهة الاتصال</string>
+    <string name="start_conversation">بدء المحادثة</string>
+    <string name="send_first_message_chat">أرسل رسالتك الأولى</string>
+    <string name="delete_messages">حذف الرسائل</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings">الإعدادات</string>
+    <string name="configure_app">تكوين التطبيق الخاص بك</string>
+    <string name="security_status">حالة الأمان</string>
+    <string name="all_systems_active">جميع الأنظمة نشطة</string>
+    <string name="sms_permissions">أذونات الرسائل القصيرة</string>
+    <string name="all_permissions_granted">تم منح جميع الأذونات</string>
+    <string name="language_settings">إعدادات اللغة</string>
+    <string name="change_app_language">تغيير لغة التطبيق</string>
+    <string name="message_storage">تخزين الرسائل</string>
+    <string name="auto_delete_messages">حذف الرسائل تلقائيًا</string>
+    <string name="subscription_plan">خطة الاشتراك</string>
+    <string name="manage_subscription">إدارة الاشتراك</string>
+    <string name="about_app">حول التطبيق</string>
+    
+    <!-- Dialogs -->
+    <string name="name">الاسم</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="password">كلمة المرور</string>
+    <string name="encryption_password">كلمة مرور التشفير</string>
+    <string name="password_hint">ستستخدم كلمة المرور هذه لتشفير/فك تشفير الرسائل مع جهة الاتصال هذه</string>
+    <string name="new_password">كلمة مرور جديدة (اتركها فارغة للاحتفاظ بالحالية)</string>
+    <string name="keep_password_hint">اترك كلمة المرور فارغة للاحتفاظ بكلمة مرور التشفير الحالية</string>
+    <string name="message">رسالة</string>
+    <string name="encryption_key">مفتاح التشفير (اختياري)</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="send">إرسال</string>
+    <string name="delete">حذف</string>
+    <string name="delete_contact">حذف جهة الاتصال</string>
+    <string name="delete_contact_confirmation">هل أنت متأكد من رغبتك في حذف جهة الاتصال هذه؟ سيتم حذف جميع الرسائل مع جهة الاتصال هذه أيضًا.</string>
+    <string name="yes_delete">نعم، احذف</string>
+    
+    <!-- Delete Options -->
+    <string name="delete_last_hour">حذف آخر ساعة</string>
+    <string name="delete_last_24h">حذف آخر 24 ساعة</string>
+    <string name="delete_last_7d">حذف آخر 7 أيام</string>
+    <string name="delete_last_30d">حذف آخر 30 يومًا</string>
+    <string name="delete_all">حذف جميع الرسائل</string>
+    
+    <!-- Languages -->
+    <string name="language">اللغة</string>
+    <string name="english">English</string>
+    <string name="polish">Polski</string>
+    <string name="spanish">Español</string>
+    <string name="german">Deutsch</string>
+    <string name="french">Français</string>
+    <string name="chinese">中文</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="arabic">العربية</string>
+    
+    <!-- Storage Duration -->
+    <string name="storage_7_days">7 أيام</string>
+    <string name="storage_30_days">30 يومًا</string>
+    <string name="storage_90_days">90 يومًا</string>
+    <string name="storage_1_year">سنة واحدة</string>
+    <string name="storage_unlimited">غير محدود</string>
+    
+    <!-- Copyright -->
+    <string name="copyright">© 2025 ORYNTIUM powered by rhei</string>
+    
+    <!-- Permissions -->
+    <string name="sms_permissions_required">أذونات الرسائل القصيرة مطلوبة</string>
+    <string name="permissions_description">لإرسال رسائل مشفرة، يحتاج هذا التطبيق إلى أذونات الرسائل القصيرة</string>
+    <string name="grant_permissions">منح الأذونات</string>
+    
+    <!-- Errors -->
+    <string name="error_sending_sms">خطأ في إرسال الرسالة القصيرة</string>
+    <string name="error_encryption">خطأ في تشفير الرسالة</string>
+    <string name="error_decryption">خطأ في فك تشفير الرسالة</string>
+    <string name="fill_all_fields">يرجى ملء جميع الحقول</string>
+    
+    <!-- Data Deleted -->
+    <string name="data_deleted">تم حذف البيانات</string>
+    <string name="data_deleted_message">تم حذف جميع البيانات نهائيًا بسبب كثرة محاولات رمز PIN الفاشلة.</string>
+    <string name="ok">موافق</string>
+    <string name="security_breach">خرق أمني</string>
+    
+    <!-- Info -->
+    <string name="version">الإصدار</string>
+    <string name="about_description">تطبيق تشفير رسائل قصيرة احترافي لنظام Android بأمان AES-256.\n\nالموقع: www.oryntium.app</string>
+    <string name="features">الميزات:</string>
+    <string name="feature_encryption">• تشفير من طرف إلى طرف</string>
+    <string name="feature_passwords">• كلمات مرور فردية لكل جهة اتصال</string>
+    <string name="feature_storage">• تخزين محلي آمن</string>
+    <string name="feature_cleanup">• تنظيف تلقائي للرسائل</string>
+    <string name="feature_multilang">• دعم متعدد اللغات</string>
+    <string name="license">الترخيص: MIT</string>
+    
+    <!-- Privacy Policy -->
+    <string name="privacy_policy">الخصوصية والأمان</string>
+    <string name="policy_no_intermediaries">• لا وسطاء - تشفير مباشر للرسائل القصيرة</string>
+    <string name="policy_no_storage">• لا يتم تخزين أي بيانات على خوادم خارجية</string>
+    <string name="policy_local_encryption">• يحدث كل التشفير محليًا على جهازك</string>
+    <string name="policy_encrypted_sms">• فقط الرسائل القصيرة المشفرة تغادر جهازك</string>
+    <string name="policy_pin_warning">• بعد 5 محاولات فاشلة لرمز PIN، يتم حذف جميع البيانات نهائيًا</string>
+    <string name="policy_no_recovery">• لا يمكن الاسترداد - هذا بالتصميم من أجل أمانك</string>
+    
+    <!-- Onboarding -->
+    <string name="welcome_title">مرحبًا بك في ORYNTIUM!</string>
+    <string name="welcome_subtitle">هل تريد تمويه هذا التطبيق؟</string>
+    <string name="choose_app_name">📱 اختر اسم التطبيق</string>
+    <string name="app_name_examples">آلة حاسبة، ألعاب، موسيقى…</string>
+    <string name="choose_pin_color">🎨 اختر لون شاشة PIN</string>
+    <string name="continue_button">متابعة</string>
+    <string name="skip_keep_default">تخطي (الاحتفاظ بـ ORYNTIUM)</string>
+    
+    <!-- Disguise App -->
+    <string name="disguise_app">تمويه التطبيق</string>
+    <string name="disguise_subtitle">تغيير الاسم وألوان PIN\n10 سمات متاحة</string>
+    <string name="language_subtitle">تغيير لغة التطبيق\nالحالي: %1$s</string>
+    <string name="app_appearance">مظهر التطبيق</string>
+    <string name="app_name_label">اسم التطبيق</string>
+    <string name="custom_name">اسم مخصص</string>
+    <string name="custom_name_placeholder">آلة حاسبة، ملاحظات، طقس…</string>
+    <string name="color_theme">سمة اللون</string>
+    <string name="pin_screen_color">لون شاشة PIN والأيقونة</string>
+    <string name="preview">معاينة</string>
+    <string name="icon_will_be">ستكون الأيقونة: %1$s باللون %2$s</string>
+    <string name="save_and_apply">حفظ وتطبيق</string>
+    <string name="save_and_restart">موافق - حفظ وإعادة تشغيل</string>
+    <string name="ok_save_language">موافق - حفظ اللغة</string>
+    <string name="back">رجوع</string>
+    <string name="restart_required_message">يحتاج التطبيق إلى إعادة التشغيل لتطبيق تغيير اللغة.</string>
+</resources>
+
+

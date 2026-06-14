@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">ORYNTIUM</string>
+    
+    <!-- PIN Screen -->
+    <string name="enter_pin">Ingrese su PIN</string>
+    <string name="create_pin">Crear un PIN de 6 dígitos</string>
+    <string name="confirm_pin">Confirme su PIN</string>
+    <string name="pin_mismatch">Los PINs no coinciden</string>
+    <string name="attempts_remaining">Intentos restantes: %d</string>
+    <string name="data_will_be_deleted">Todos los datos se eliminarán después de %d intentos fallidos</string>
+    
+    <!-- Home Screen -->
+    <string name="secure_messaging">Mensajería segura</string>
+    <string name="quick_sms">SMS</string>
+    <string name="contacts">Contactos</string>
+    <string name="recent_messages">Mensajes recientes</string>
+    <string name="no_messages_yet">Aún no hay mensajes</string>
+    <string name="send_first_message">Envía tu primer mensaje cifrado</string>
+    
+    <!-- Chat Screen -->
+    <string name="encryption_active">Cifrado activo</string>
+    <string name="encryption">Cifrado</string>
+    <string name="encrypted_message_hint">Mensaje cifrado…</string>
+    <string name="type_message_hint">Escribe mensaje…</string>
+    <string name="encrypted">Cifrado</string>
+    
+    <!-- Contacts Screen -->
+    <string name="search_contacts">Buscar contactos…</string>
+    <string name="no_contacts_yet">Aún no hay contactos</string>
+    <string name="add_first_contact">Agregue su primer contacto para comenzar la mensajería segura</string>
+    <string name="add_contact">Agregar contacto</string>
+    <string name="edit_contact">Editar contacto</string>
+    <string name="start_conversation">Iniciar conversación</string>
+    <string name="send_first_message_chat">Envía tu primer mensaje</string>
+    <string name="delete_messages">Eliminar mensajes</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings">Configuración</string>
+    <string name="configure_app">Configurar su aplicación</string>
+    <string name="security_status">Estado de seguridad</string>
+    <string name="all_systems_active">Todos los sistemas activos</string>
+    <string name="sms_permissions">Permisos SMS</string>
+    <string name="all_permissions_granted">Todos los permisos otorgados</string>
+    <string name="language_settings">Configuración de Idioma</string>
+    <string name="change_app_language">Cambiar idioma de la aplicación</string>
+    <string name="message_storage">Almacenamiento de mensajes</string>
+    <string name="auto_delete_messages">Eliminar mensajes automáticamente</string>
+    <string name="subscription_plan">Plan de suscripción</string>
+    <string name="manage_subscription">Administrar suscripción</string>
+    <string name="about_app">Acerca de la aplicación</string>
+    
+    <!-- Dialogs -->
+    <string name="name">Nombre</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="password">Contraseña</string>
+    <string name="encryption_password">Contraseña de Cifrado</string>
+    <string name="password_hint">Esta contraseña se utilizará para cifrar/descifrar mensajes con este contacto</string>
+    <string name="new_password">Nueva contraseña (dejar vacío para mantener la actual)</string>
+    <string name="keep_password_hint">Deje la contraseña vacía para mantener la contraseña de cifrado actual</string>
+    <string name="message">Mensaje</string>
+    <string name="encryption_key">Clave de cifrado (opcional)</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="send">Enviar</string>
+    <string name="delete">Eliminar</string>
+    <string name="delete_contact">Eliminar contacto</string>
+    <string name="delete_contact_confirmation">¿Está seguro de que desea eliminar este contacto? Todos los mensajes con este contacto también se eliminarán.</string>
+    <string name="yes_delete">Sí, eliminar</string>
+    
+    <!-- Delete Options -->
+    <string name="delete_last_hour">Eliminar última hora</string>
+    <string name="delete_last_24h">Eliminar últimas 24 horas</string>
+    <string name="delete_last_7d">Eliminar últimos 7 días</string>
+    <string name="delete_last_30d">Eliminar últimos 30 días</string>
+    <string name="delete_all">Eliminar todos los mensajes</string>
+    
+    <!-- Languages -->
+    <string name="language">Idioma</string>
+    <string name="english">English</string>
+    <string name="polish">Polski</string>
+    <string name="spanish">Español</string>
+    <string name="german">Deutsch</string>
+    <string name="french">Français</string>
+    <string name="chinese">中文</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="arabic">العربية</string>
+    
+    <!-- Storage Duration -->
+    <string name="storage_7_days">7 días</string>
+    <string name="storage_30_days">30 días</string>
+    <string name="storage_90_days">90 días</string>
+    <string name="storage_1_year">1 año</string>
+    <string name="storage_unlimited">Ilimitado</string>
+    
+    <!-- Copyright -->
+    <string name="copyright">© 2025 ORYNTIUM powered by rhei</string>
+    
+    <!-- Permissions -->
+    <string name="sms_permissions_required">Permisos SMS requeridos</string>
+    <string name="permissions_description">Para enviar mensajes cifrados, esta aplicación necesita permisos SMS</string>
+    <string name="grant_permissions">Otorgar permisos</string>
+    
+    <!-- Errors -->
+    <string name="error_sending_sms">Error al enviar SMS</string>
+    <string name="error_encryption">Error al cifrar mensaje</string>
+    <string name="error_decryption">Error al descifrar mensaje</string>
+    <string name="fill_all_fields">Por favor complete todos los campos</string>
+    
+    <!-- Data Deleted -->
+    <string name="data_deleted">DATOS ELIMINADOS</string>
+    <string name="data_deleted_message">Todos los datos han sido eliminados permanentemente debido a demasiados intentos fallidos de PIN.</string>
+    <string name="ok">OK</string>
+    <string name="security_breach">VIOLACIÓN DE SEGURIDAD</string>
+    
+    <!-- Info -->
+    <string name="version">Versión</string>
+    <string name="about_description">Aplicación profesional de cifrado SMS para Android con seguridad AES-256.\n\nSitio web: www.oryntium.app</string>
+    <string name="features">Características:</string>
+    <string name="feature_encryption">• Cifrado de extremo a extremo</string>
+    <string name="feature_passwords">• Contraseñas individuales por contacto</string>
+    <string name="feature_storage">• Almacenamiento local seguro</string>
+    <string name="feature_cleanup">• Limpieza automática de mensajes</string>
+    <string name="feature_multilang">• Soporte multiidioma</string>
+    <string name="license">Licencia: MIT</string>
+    
+    <!-- Privacy Policy -->
+    <string name="privacy_policy">Privacidad &amp; Seguridad</string>
+    <string name="policy_no_intermediaries">• Sin intermediarios - cifrado SMS directo</string>
+    <string name="policy_no_storage">• No se almacenan datos en servidores externos</string>
+    <string name="policy_local_encryption">• Todo el cifrado ocurre localmente en su dispositivo</string>
+    <string name="policy_encrypted_sms">• Solo SMS cifrado sale de su dispositivo</string>
+    <string name="policy_pin_warning">• Después de 5 intentos fallidos de PIN, TODOS LOS DATOS SE ELIMINAN PERMANENTEMENTE</string>
+    <string name="policy_no_recovery">• No hay recuperación posible - esto es por diseño para su seguridad</string>
+    
+    <!-- Onboarding -->
+    <string name="welcome_title">¡Bienvenido a ORYNTIUM!</string>
+    <string name="welcome_subtitle">¿Te gustaría disfrazar esta aplicación?</string>
+    <string name="choose_app_name">📱 Elige el Nombre de la Aplicación</string>
+    <string name="app_name_examples">Calculadora, Juegos, Música…</string>
+    <string name="choose_pin_color">🎨 Elige el Color de la Pantalla PIN</string>
+    <string name="continue_button">CONTINUAR</string>
+    <string name="skip_keep_default">Omitir (mantener ORYNTIUM)</string>
+    
+    <!-- Disguise App -->
+    <string name="disguise_app">Disfrazar Aplicación</string>
+    <string name="disguise_subtitle">Cambiar nombre y colores PIN\n10 temas disponibles</string>
+    <string name="language_subtitle">Cambiar idioma de la aplicación\nActual: %1$s</string>
+    <string name="app_appearance">Apariencia de la aplicación</string>
+    <string name="app_name_label">Nombre de la Aplicación</string>
+    <string name="custom_name">Nombre personalizado</string>
+    <string name="custom_name_placeholder">Calculadora, Notas, Clima…</string>
+    <string name="color_theme">Tema de Color</string>
+    <string name="pin_screen_color">Color de pantalla PIN e icono</string>
+    <string name="preview">Vista Previa</string>
+    <string name="icon_will_be">El icono será: %1$s en %2$s</string>
+    <string name="save_and_apply">GUARDAR Y APLICAR</string>
+    <string name="save_and_restart">OK - GUARDAR Y REINICIAR</string>
+    <string name="ok_save_language">OK - GUARDAR IDIOMA</string>
+    <string name="back">Atrás</string>
+    <string name="restart_required_message">La aplicación necesita reiniciarse para aplicar el cambio de idioma.</string>
+</resources>

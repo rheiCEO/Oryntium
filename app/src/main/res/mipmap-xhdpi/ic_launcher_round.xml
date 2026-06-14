@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#0A0A0A"
+        android:pathData="M0,0h96v96h-96z"/>
+    
+    <!-- Lock icon -->
+    <path
+        android:fillColor="#00D4FF"
+        android:pathData="M48,28
+            C42,28 37,33 37,39
+            L37,44
+            L33,44
+            C30.5,44 29,45.5 29,48
+            L29,64
+            C29,66.5 30.5,68 33,68
+            L63,68
+            C65.5,68 67,66.5 67,64
+            L67,48
+            C67,45.5 65.5,44 63,44
+            L59,44
+            L59,39
+            C59,33 54,28 48,28
+            Z
+            M48,32
+            C52,32 55,35 55,39
+            L55,44
+            L41,44
+            L41,39
+            C41,35 44,32 48,32
+            Z
+            M48,52
+            C50,52 52,54 52,56
+            C52,57 51.3,58 50.5,58.5
+            L50.5,61
+            C50.5,62 49.5,63 48,63
+            C46.5,63 45.5,62 45.5,61
+            L45.5,58.5
+            C44.7,58 44,57 44,56
+            C44,54 46,52 48,52
+            Z"/>
+    
+    <!-- Diamond accent -->
+    <path
+        android:fillColor="#8B5CF6"
+        android:pathData="M48,14
+            L56,22
+            L48,30
+            L40,22
+            Z"/>
+</vector>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

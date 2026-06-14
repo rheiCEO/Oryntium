@@ -1,0 +1,286 @@
+# Copyright (C) 2025 ORYNTIUM
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: ORYNTIUM Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/oryntium\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: oryntium\n"
+
+#. Theme Name of the theme
+msgid "ORYNTIUM Cyberpunk"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://oryntium.app"
+msgstr ""
+
+#. Description of the theme
+msgid "Cyberpunk WordPress theme for ORYNTIUM secure messaging platform with multilingual support"
+msgstr ""
+
+#. Author of the theme
+msgid "ORYNTIUM powered by rhei"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://oryntium.app"
+msgstr ""
+
+msgid "Primary Menu"
+msgstr ""
+
+msgid "Footer Menu"
+msgstr ""
+
+msgid "Add widgets here."
+msgstr ""
+
+msgid "Add footer widgets here."
+msgstr ""
+
+msgid "Skip to content"
+msgstr ""
+
+msgid "Menu"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "KEEP IT YOURS"
+msgstr ""
+
+msgid "Najnowocześniejsza platforma szyfrowania SMS w Polsce"
+msgstr ""
+
+msgid "Twoje wiadomości pozostają tylko Twoje. Szyfrowanie end-to-end AES-256, indywidualne hasła dla każdego kontaktu, zero chmury."
+msgstr ""
+
+msgid "Odkryj możliwości"
+msgstr ""
+
+msgid "Zobacz jak działa"
+msgstr ""
+
+msgid "FUNKCJE"
+msgstr ""
+
+msgid "Szyfrowanie AES-256"
+msgstr ""
+
+msgid "Wojskowy standard szyfrowania z algorytmem AES-256-CBC. Każda wiadomość chroniona na poziomie bankowym."
+msgstr ""
+
+msgid "Indywidualne hasła"
+msgstr ""
+
+msgid "Każdy kontakt ma własne unikalne hasło szyfrujące. Maksymalne bezpieczeństwo bez kompromisów."
+msgstr ""
+
+msgid "Automatyczne przetwarzanie"
+msgstr ""
+
+msgid "Aplikacja automatycznie szyfruje i deszyfruje wiadomości w tle. Wszystko działa płynnie i bezproblemowo."
+msgstr ""
+
+msgid "Zero chmury"
+msgstr ""
+
+msgid "Wszystkie dane przechowywane lokalnie na Twoim urządzeniu. Brak serwerów zewnętrznych, brak ryzyka wycieku."
+msgstr ""
+
+msgid "Ochrona ekranu"
+msgstr ""
+
+msgid "Automatyczna blokada screenshotów z efektem Matrix. Twoje rozmowy pozostają prywatne."
+msgstr ""
+
+msgid "6 języków"
+msgstr ""
+
+msgid "Wsparcie dla Polski, Angielskiego, Hiszpańskiego, Niemieckiego, Rosyjskiego i Chińskiego."
+msgstr ""
+
+msgid "JAK TO DZIAŁA"
+msgstr ""
+
+msgid "Utwórz PIN"
+msgstr ""
+
+msgid "Przy pierwszym uruchomieniu ustaw 6-cyfrowy PIN. To Twoja pierwsza linia obrony. Maksymalnie 5 prób logowania dla bezpieczeństwa."
+msgstr ""
+
+msgid "Dodaj kontakty"
+msgstr ""
+
+msgid "Dla każdego kontaktu ustaw unikalną nazwę, numer telefonu i hasło szyfrujące. Hasła przechowywane w szyfrowanej bazie danych Room."
+msgstr ""
+
+msgid "Wyślij wiadomość"
+msgstr ""
+
+msgid "Wpisz wiadomość, włącz przełącznik szyfrowania i wyślij. Aplikacja automatycznie zaszyfruje treść używając AES-256 z hasłem kontaktu."
+msgstr ""
+
+msgid "Odbierz bezpiecznie"
+msgstr ""
+
+msgid "Przychodzące zaszyfrowane SMS-y (z prefiksem SCRYPT:) są automatycznie deszyfrowane. Widzisz czytelną treść, podczas gdy inne aplikacje pokazują szyfr."
+msgstr ""
+
+msgid "ZALETY"
+msgstr ""
+
+msgid "Pełna prywatność"
+msgstr ""
+
+msgid "Twoje wiadomości nigdy nie opuszczają Twojego urządzenia w postaci niezaszyfrowanej."
+msgstr ""
+
+msgid "Zero wiedzy serwerowej"
+msgstr ""
+
+msgid "Brak serwerów zewnętrznych oznacza, że nikt oprócz Ciebie nie ma dostępu do danych."
+msgstr ""
+
+msgid "Pełna kontrola"
+msgstr ""
+
+msgid "Ty decydujesz, które wiadomości szyfrować i z kim się nimi dzielić."
+msgstr ""
+
+msgid "Bez abonamentów"
+msgstr ""
+
+msgid "Jednorazowy zakup, brak ukrytych opłat, brak subskrypcji. Pełen dostęp na zawsze."
+msgstr ""
+
+msgid "Ekologiczne"
+msgstr ""
+
+msgid "Brak serwerów chmurowych = mniejszy ślad węglowy i większa efektywność energetyczna."
+msgstr ""
+
+msgid "Nowoczesna technologia"
+msgstr ""
+
+msgid "Zbudowane na Jetpack Compose, Kotlin i najnowszych standardach Android 14."
+msgstr ""
+
+msgid "BEZPIECZEŃSTWO"
+msgstr ""
+
+msgid "Algorytmy szyfrowania"
+msgstr ""
+
+msgid "Szyfrowanie wiadomości na poziomie wojskowym"
+msgstr ""
+
+msgid "10,000 iteracji derywacji kluczy"
+msgstr ""
+
+msgid "Bezpieczne kodowanie dla formatu SMS"
+msgstr ""
+
+msgid "Ochrona danych"
+msgstr ""
+
+msgid "Szyfrowana lokalna baza danych"
+msgstr ""
+
+msgid "allowBackup=\"false\" - zero chmury"
+msgstr ""
+
+msgid "Klucze unikalne dla każdego urządzenia"
+msgstr ""
+
+msgid "Format wiadomości"
+msgstr ""
+
+msgid "Każda zaszyfrowana wiadomość zawiera unikalny wektor inicjalizacji (IV) i sól (Salt) dla maksymalnego bezpieczeństwa."
+msgstr ""
+
+msgid "Keep it yours"
+msgstr ""
+
+msgid "Wszystkie prawa zastrzeżone."
+msgstr ""
+
+msgid "Powered by"
+msgstr ""
+
+msgid "ORYNTIUM - Secure Messaging Platform"
+msgstr ""
+
+msgid "Keep it yours. Najnowocześniejsze szyfrowanie SMS."
+msgstr ""
+
+msgid "ORYNTIUM powered by rhei"
+msgstr ""
+
+msgid "Sorry, no posts found."
+msgstr ""
+
+msgid "Pages:"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "An error occurred. Please try again."
+msgstr ""
+
+msgid "ORYNTIUM Options"
+msgstr ""
+
+msgid "Hero Title"
+msgstr ""
+
+msgid "Hero Subtitle"
+msgstr ""
+
+msgid "Hero Description"
+msgstr ""
+
+msgid "Features"
+msgstr ""
+
+msgid "Feature"
+msgstr ""
+
+msgid "Benefits"
+msgstr ""
+
+msgid "Benefit"
+msgstr ""
+
+msgid "Feature Details"
+msgstr ""
+
+msgid "Icon SVG Path"
+msgstr ""
+
+msgid "Benefit Details"
+msgstr ""
+
+msgid "Welcome to ORYNTIUM Theme!"
+msgstr ""
+
+msgid "Your secure messaging platform website is ready."
+msgstr ""
+
+msgid "Jeśli widzisz to, jesteś ciekawy!"
+msgstr ""
+
+msgid "Spróbuj wpisać kod Konami!"
+msgstr ""
+
+

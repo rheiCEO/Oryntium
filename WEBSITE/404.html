@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Strona nie znaleziona | ORYNTIUM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #0A0A0A;
+            color: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(8rem, 20vw, 15rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #BB00FF, #00F0FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 50px rgba(187, 0, 255, 0.5);
+            animation: glitch 3s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { 
+                text-shadow: 0 0 50px rgba(187, 0, 255, 0.5); 
+            }
+            50% { 
+                text-shadow: -5px 0 50px rgba(0, 240, 255, 0.5), 
+                             5px 0 50px rgba(255, 0, 255, 0.5); 
+            }
+        }
+        
+        .error-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #00F0FF;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .error-description {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: #B0B0B0;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #BB00FF, #00F0FF);
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(187, 0, 255, 0.5);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 40px rgba(187, 0, 255, 0.8);
+        }
+        
+        .diamond {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            z-index: 1;
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+    
+    <svg class="diamond" viewBox="0 0 400 400" width="600" height="600">
+        <defs>
+            <linearGradient id="diamondGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#BB00FF;stop-opacity:0.3" />
+                <stop offset="100%" style="stop-color:#00F0FF;stop-opacity:0.3" />
+            </linearGradient>
+        </defs>
+        <rect x="100" y="100" width="200" height="200" fill="none" 
+              stroke="url(#diamondGradient)" stroke-width="2" transform="rotate(45 200 200)"/>
+        <rect x="125" y="125" width="150" height="150" fill="none" 
+              stroke="url(#diamondGradient)" stroke-width="1.5" transform="rotate(45 200 200)"/>
+    </svg>
+    
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Strona nie znaleziona</h1>
+        <p class="error-description">
+            Strona, której szukasz, nie istnieje lub została przeniesiona.
+            <br>
+            Wróć do strony głównej i odkryj ORYNTIUM.
+        </p>
+        <a href="/" class="btn">
+            <span>← Powrót do strony głównej</span>
+        </a>
+    </div>
+    
+    <script>
+        // Random glitch effect
+        setInterval(() => {
+            if (Math.random() > 0.95) {
+                const errorCode = document.querySelector('.error-code');
+                errorCode.style.transform = `translate(${Math.random() * 10 - 5}px, ${Math.random() * 10 - 5}px)`;
+                setTimeout(() => {
+                    errorCode.style.transform = 'translate(0, 0)';
+                }, 50);
+            }
+        }, 100);
+    </script>
+</body>
+</html>
+

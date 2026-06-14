@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- SMS Permissions - Required -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    
+    <!-- Contacts Permission - Optional -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
+    <!-- Phone State Permission - For SMS functionality -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <!-- Hardware features - telephony not strictly required but preferred -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:name=".SmsCryptApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="${appIcon}"
+        android:label="${appName}"
+        android:roundIcon="${appIcon}"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmsCryptPro"
+        tools:targetApi="31">
+        
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:icon="${appIcon}"
+            android:label="${appName}"
+            android:theme="@style/Theme.SmsCryptPro"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- SMS Receiver for incoming messages -->
+        <receiver
+            android:name=".receiver.SmsReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Service for background SMS handling -->
+        <service
+            android:name=".service.SmsService"
+            android:enabled="true"
+            android:exported="false" />
+        
+        <!-- Disable default WorkManager initialization - using Hilt -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+    </application>
+
+</manifest>
+

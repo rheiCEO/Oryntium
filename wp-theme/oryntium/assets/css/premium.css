@@ -1,0 +1,530 @@
+/* ========================================
+   ORYNTIUM - PREMIUM EFFECTS CSS
+   Ultra cyberpunk styling
+   ======================================== */
+
+/* ========================================
+   LOADING SCREEN
+   ======================================== */
+
+.premium-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease;
+}
+
+.premium-loader.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    margin: 0 auto 2rem;
+    filter: drop-shadow(0 0 20px #BB00FF);
+}
+
+.loader-diamond {
+    animation: loader-spin 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes loader-spin {
+    from { transform: rotate(45deg); }
+    to { transform: rotate(405deg); }
+}
+
+.loader-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #BB00FF, #00F0FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    letter-spacing: 5px;
+    animation: loader-pulse 2s ease-in-out infinite;
+}
+
+@keyframes loader-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.loader-bar {
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.loader-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #BB00FF, #00F0FF);
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 20px #BB00FF;
+}
+
+.loader-subtext {
+    font-family: 'Rajdhani', sans-serif;
+    color: #00F0FF;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: loader-blink 1.5s infinite;
+}
+
+@keyframes loader-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* ========================================
+   PARTICLES CANVAS
+   ======================================== */
+
+.particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+/* ========================================
+   MOUSE TRAIL CANVAS
+   ======================================== */
+
+.mouse-trail-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* ========================================
+   3D TILT CARDS
+   ======================================== */
+
+.feature-card,
+.benefit-card {
+    transition: transform 0.1s ease !important;
+    transform-style: preserve-3d;
+}
+
+/* ========================================
+   TYPEWRITER CURSOR
+   ======================================== */
+
+.typewriter-cursor {
+    display: inline-block;
+    margin-left: 4px;
+    animation: none;
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* ========================================
+   ANIMATED STATS
+   ======================================== */
+
+.animated-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: rgba(26, 26, 26, 0.3);
+    border: 1px solid rgba(187, 0, 255, 0.2);
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(187, 0, 255, 0.1), transparent);
+    animation: stats-shine 3s infinite;
+}
+
+@keyframes stats-shine {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #BB00FF, #00F0FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(187, 0, 255, 0.5);
+}
+
+.stat-label {
+    font-family: 'Rajdhani', sans-serif;
+    color: #00F0FF;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   HOLOGRAPHIC EFFECT
+   ======================================== */
+
+.holographic-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: screen;
+}
+
+/* ========================================
+   REVEAL ANIMATIONS
+   ======================================== */
+
+.reveal-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-element.revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ========================================
+   ENHANCED GLOWS
+   ======================================== */
+
+.feature-card:hover,
+.benefit-card:hover {
+    box-shadow: 
+        0 0 60px rgba(187, 0, 255, 0.6),
+        inset 0 0 30px rgba(187, 0, 255, 0.2),
+        0 10px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ========================================
+   SECTION DIVIDERS
+   ======================================== */
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #BB00FF, transparent);
+    opacity: 0.5;
+}
+
+/* ========================================
+   ANIMATED BORDERS
+   ======================================== */
+
+.feature-card::after,
+.benefit-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #BB00FF, #00F0FF, #BB00FF);
+    background-size: 400% 400%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: gradient-shift 3s ease infinite;
+}
+
+.feature-card:hover::after,
+.benefit-card:hover::after {
+    opacity: 0.5;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* ========================================
+   TEXT GLOW ON HOVER
+   ======================================== */
+
+.feature-title:hover,
+.benefit-title:hover,
+.step-title:hover {
+    text-shadow: 0 0 20px #00F0FF;
+    transition: text-shadow 0.3s ease;
+}
+
+/* ========================================
+   SCROLL PROGRESS BAR
+   ======================================== */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #BB00FF, #00F0FF);
+    z-index: 10000;
+    box-shadow: 0 0 20px #BB00FF;
+    transition: width 0.1s ease;
+}
+
+/* ========================================
+   FLOATING ACTION BUTTON
+   ======================================== */
+
+.fab-scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #BB00FF, #00F0FF);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 5px 30px rgba(187, 0, 255, 0.5);
+}
+
+.fab-scroll-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fab-scroll-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(187, 0, 255, 0.8);
+}
+
+.fab-scroll-top svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* ========================================
+   INTERACTIVE HOVER STATES
+   ======================================== */
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(187, 0, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.nav-link:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* ========================================
+   BUTTON RIPPLE EFFECT
+   ======================================== */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:active::after {
+    width: 400px;
+    height: 400px;
+    transition: width 0.1s ease, height 0.1s ease;
+}
+
+/* ========================================
+   ENHANCED SCANLINES
+   ======================================== */
+
+.scanlines {
+    animation: scanline 8s linear infinite, scanline-flicker 3s infinite;
+}
+
+@keyframes scanline-flicker {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.15; }
+}
+
+/* ========================================
+   GLITCH OVERLAY ENHANCEMENT
+   ======================================== */
+
+.glitch-overlay {
+    animation: pulse 4s ease-in-out infinite, glitch-shift 8s infinite;
+}
+
+@keyframes glitch-shift {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(2px, 1px); }
+    50% { transform: translate(-1px, -2px); }
+    75% { transform: translate(-2px, 1px); }
+}
+
+/* ========================================
+   MOBILE OPTIMIZATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .particles-canvas,
+    .mouse-trail-canvas {
+        display: none; /* Save mobile performance */
+    }
+    
+    .animated-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .loader-text {
+        font-size: 2rem;
+    }
+    
+    .loader-bar {
+        width: 200px;
+    }
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+.feature-card,
+.benefit-card,
+.step {
+    will-change: transform;
+}
+
+.rotating-diamond svg {
+    will-change: transform;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .particles-canvas,
+    .mouse-trail-canvas {
+        display: none;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .premium-loader,
+    .particles-canvas,
+    .mouse-trail-canvas,
+    .fab-scroll-top,
+    .scanlines,
+    .glitch-overlay {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+

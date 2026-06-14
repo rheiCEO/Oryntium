@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#0A0A0A"
+        android:pathData="M0,0h72v72h-72z"/>
+    
+    <!-- Lock icon -->
+    <path
+        android:fillColor="#00D4FF"
+        android:pathData="M36,20
+            C31,20 27,24 27,29
+            L27,33
+            L24,33
+            C22.5,33 21,34.5 21,36
+            L21,48
+            C21,49.5 22.5,51 24,51
+            L48,51
+            C49.5,51 51,49.5 51,48
+            L51,36
+            C51,34.5 49.5,33 48,33
+            L45,33
+            L45,29
+            C45,24 41,20 36,20
+            Z
+            M36,23
+            C39.5,23 42,25.5 42,29
+            L42,33
+            L30,33
+            L30,29
+            C30,25.5 32.5,23 36,23
+            Z
+            M36,38
+            C37.5,38 39,39.5 39,41
+            C39,41.8 38.5,42.5 37.8,43
+            L37.8,45
+            C37.8,45.8 37,46.5 36,46.5
+            C35,46.5 34.2,45.8 34.2,45
+            L34.2,43
+            C33.5,42.5 33,41.8 33,41
+            C33,39.5 34.5,38 36,38
+            Z"/>
+</vector>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

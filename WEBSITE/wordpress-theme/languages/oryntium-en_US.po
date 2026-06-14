@@ -1,0 +1,267 @@
+# Copyright (C) 2025 ORYNTIUM
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: ORYNTIUM Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/oryntium\n"
+"Last-Translator: ORYNTIUM Team\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27 12:00+0000\n"
+"PO-Revision-Date: 2025-01-27 12:00+0000\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: oryntium\n"
+
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+msgid "Footer Menu"
+msgstr "Footer Menu"
+
+msgid "Add widgets here."
+msgstr "Add widgets here."
+
+msgid "Add footer widgets here."
+msgstr "Add footer widgets here."
+
+msgid "Skip to content"
+msgstr "Skip to content"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "KEEP IT YOURS"
+msgstr "KEEP IT YOURS"
+
+msgid "Najnowocześniejsza platforma szyfrowania SMS w Polsce"
+msgstr "Most advanced SMS encryption platform in Poland"
+
+msgid "Twoje wiadomości pozostają tylko Twoje. Szyfrowanie end-to-end AES-256, indywidualne hasła dla każdego kontaktu, zero chmury."
+msgstr "Your messages remain only yours. End-to-end AES-256 encryption, individual passwords for each contact, zero cloud."
+
+msgid "Odkryj możliwości"
+msgstr "Discover Features"
+
+msgid "Zobacz jak działa"
+msgstr "See How It Works"
+
+msgid "FUNKCJE"
+msgstr "FEATURES"
+
+msgid "Szyfrowanie AES-256"
+msgstr "AES-256 Encryption"
+
+msgid "Wojskowy standard szyfrowania z algorytmem AES-256-CBC. Każda wiadomość chroniona na poziomie bankowym."
+msgstr "Military-grade encryption with AES-256-CBC algorithm. Every message protected at banking level."
+
+msgid "Indywidualne hasła"
+msgstr "Individual Passwords"
+
+msgid "Każdy kontakt ma własne unikalne hasło szyfrujące. Maksymalne bezpieczeństwo bez kompromisów."
+msgstr "Each contact has its own unique encryption password. Maximum security without compromises."
+
+msgid "Automatyczne przetwarzanie"
+msgstr "Automatic Processing"
+
+msgid "Aplikacja automatycznie szyfruje i deszyfruje wiadomości w tle. Wszystko działa płynnie i bezproblemowo."
+msgstr "The app automatically encrypts and decrypts messages in the background. Everything works smoothly and seamlessly."
+
+msgid "Zero chmury"
+msgstr "Zero Cloud"
+
+msgid "Wszystkie dane przechowywane lokalnie na Twoim urządzeniu. Brak serwerów zewnętrznych, brak ryzyka wycieku."
+msgstr "All data stored locally on your device. No external servers, no leak risk."
+
+msgid "Ochrona ekranu"
+msgstr "Screen Protection"
+
+msgid "Automatyczna blokada screenshotów z efektem Matrix. Twoje rozmowy pozostają prywatne."
+msgstr "Automatic screenshot blocking with Matrix effect. Your conversations remain private."
+
+msgid "6 języków"
+msgstr "6 Languages"
+
+msgid "Wsparcie dla Polski, Angielskiego, Hiszpańskiego, Niemieckiego, Rosyjskiego i Chińskiego."
+msgstr "Support for Polish, English, Spanish, German, Russian and Chinese."
+
+msgid "JAK TO DZIAŁA"
+msgstr "HOW IT WORKS"
+
+msgid "Utwórz PIN"
+msgstr "Create PIN"
+
+msgid "Przy pierwszym uruchomieniu ustaw 6-cyfrowy PIN. To Twoja pierwsza linia obrony. Maksymalnie 5 prób logowania dla bezpieczeństwa."
+msgstr "Set a 6-digit PIN on first launch. This is your first line of defense. Maximum 5 login attempts for security."
+
+msgid "Dodaj kontakty"
+msgstr "Add Contacts"
+
+msgid "Dla każdego kontaktu ustaw unikalną nazwę, numer telefonu i hasło szyfrujące. Hasła przechowywane w szyfrowanej bazie danych Room."
+msgstr "For each contact, set a unique name, phone number and encryption password. Passwords stored in encrypted Room database."
+
+msgid "Wyślij wiadomość"
+msgstr "Send Message"
+
+msgid "Wpisz wiadomość, włącz przełącznik szyfrowania i wyślij. Aplikacja automatycznie zaszyfruje treść używając AES-256 z hasłem kontaktu."
+msgstr "Type a message, enable encryption switch and send. The app automatically encrypts content using AES-256 with contact password."
+
+msgid "Odbierz bezpiecznie"
+msgstr "Receive Securely"
+
+msgid "Przychodzące zaszyfrowane SMS-y (z prefiksem SCRYPT:) są automatycznie deszyfrowane. Widzisz czytelną treść, podczas gdy inne aplikacje pokazują szyfr."
+msgstr "Incoming encrypted SMS (with SCRYPT: prefix) are automatically decrypted. You see readable content while other apps show cipher."
+
+msgid "ZALETY"
+msgstr "BENEFITS"
+
+msgid "Pełna prywatność"
+msgstr "Complete Privacy"
+
+msgid "Twoje wiadomości nigdy nie opuszczają Twojego urządzenia w postaci niezaszyfrowanej."
+msgstr "Your messages never leave your device in unencrypted form."
+
+msgid "Zero wiedzy serwerowej"
+msgstr "Zero Server Knowledge"
+
+msgid "Brak serwerów zewnętrznych oznacza, że nikt oprócz Ciebie nie ma dostępu do danych."
+msgstr "No external servers means no one except you has access to data."
+
+msgid "Pełna kontrola"
+msgstr "Full Control"
+
+msgid "Ty decydujesz, które wiadomości szyfrować i z kim się nimi dzielić."
+msgstr "You decide which messages to encrypt and with whom to share them."
+
+msgid "Bez abonamentów"
+msgstr "No Subscriptions"
+
+msgid "Jednorazowy zakup, brak ukrytych opłat, brak subskrypcji. Pełen dostęp na zawsze."
+msgstr "One-time purchase, no hidden fees, no subscriptions. Full access forever."
+
+msgid "Ekologiczne"
+msgstr "Eco-Friendly"
+
+msgid "Brak serwerów chmurowych = mniejszy ślad węglowy i większa efektywność energetyczna."
+msgstr "No cloud servers = smaller carbon footprint and greater energy efficiency."
+
+msgid "Nowoczesna technologia"
+msgstr "Modern Technology"
+
+msgid "Zbudowane na Jetpack Compose, Kotlin i najnowszych standardach Android 14."
+msgstr "Built on Jetpack Compose, Kotlin and latest Android 14 standards."
+
+msgid "BEZPIECZEŃSTWO"
+msgstr "SECURITY"
+
+msgid "Algorytmy szyfrowania"
+msgstr "Encryption Algorithms"
+
+msgid "Szyfrowanie wiadomości na poziomie wojskowym"
+msgstr "Military-grade message encryption"
+
+msgid "10,000 iteracji derywacji kluczy"
+msgstr "10,000 key derivation iterations"
+
+msgid "Bezpieczne kodowanie dla formatu SMS"
+msgstr "Secure encoding for SMS format"
+
+msgid "Ochrona danych"
+msgstr "Data Protection"
+
+msgid "Szyfrowana lokalna baza danych"
+msgstr "Encrypted local database"
+
+msgid "allowBackup=\"false\" - zero chmury"
+msgstr "allowBackup=\"false\" - zero cloud"
+
+msgid "Klucze unikalne dla każdego urządzenia"
+msgstr "Unique keys for each device"
+
+msgid "Format wiadomości"
+msgstr "Message Format"
+
+msgid "Każda zaszyfrowana wiadomość zawiera unikalny wektor inicjalizacji (IV) i sól (Salt) dla maksymalnego bezpieczeństwa."
+msgstr "Each encrypted message contains unique initialization vector (IV) and salt for maximum security."
+
+msgid "Keep it yours"
+msgstr "Keep it yours"
+
+msgid "Wszystkie prawa zastrzeżone."
+msgstr "All rights reserved."
+
+msgid "Powered by"
+msgstr "Powered by"
+
+msgid "ORYNTIUM - Secure Messaging Platform"
+msgstr "ORYNTIUM - Secure Messaging Platform"
+
+msgid "Keep it yours. Najnowocześniejsze szyfrowanie SMS."
+msgstr "Keep it yours. Most advanced SMS encryption."
+
+msgid "ORYNTIUM powered by rhei"
+msgstr "ORYNTIUM powered by rhei"
+
+msgid "Sorry, no posts found."
+msgstr "Sorry, no posts found."
+
+msgid "Pages:"
+msgstr "Pages:"
+
+msgid "Loading..."
+msgstr "Loading..."
+
+msgid "An error occurred. Please try again."
+msgstr "An error occurred. Please try again."
+
+msgid "ORYNTIUM Options"
+msgstr "ORYNTIUM Options"
+
+msgid "Hero Title"
+msgstr "Hero Title"
+
+msgid "Hero Subtitle"
+msgstr "Hero Subtitle"
+
+msgid "Hero Description"
+msgstr "Hero Description"
+
+msgid "Features"
+msgstr "Features"
+
+msgid "Feature"
+msgstr "Feature"
+
+msgid "Benefits"
+msgstr "Benefits"
+
+msgid "Benefit"
+msgstr "Benefit"
+
+msgid "Feature Details"
+msgstr "Feature Details"
+
+msgid "Icon SVG Path"
+msgstr "Icon SVG Path"
+
+msgid "Benefit Details"
+msgstr "Benefit Details"
+
+msgid "Welcome to ORYNTIUM Theme!"
+msgstr "Welcome to ORYNTIUM Theme!"
+
+msgid "Your secure messaging platform website is ready."
+msgstr "Your secure messaging platform website is ready."
+
+msgid "Jeśli widzisz to, jesteś ciekawy!"
+msgstr "If you see this, you're curious!"
+
+msgid "Spróbuj wpisać kod Konami!"
+msgstr "Try entering the Konami code!"
+
+

@@ -1,0 +1,48 @@
+{
+  "name": "oryntium-website",
+  "version": "1.0.0",
+  "description": "ORYNTIUM - Secure Messaging Platform Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "start:node": "npx http-server -p 8000",
+    "minify:html": "html-minifier --collapse-whitespace --remove-comments index.html -o index.min.html",
+    "minify:css": "cleancss -o styles.min.css styles.css",
+    "minify:js": "terser script.js -o script.min.js -c -m",
+    "minify:all": "npm run minify:html && npm run minify:css && npm run minify:js",
+    "optimize": "npm run minify:all",
+    "deploy:netlify": "netlify deploy --prod --dir=.",
+    "deploy:vercel": "vercel --prod"
+  },
+  "keywords": [
+    "oryntium",
+    "secure-messaging",
+    "encryption",
+    "sms",
+    "cyberpunk",
+    "website"
+  ],
+  "author": "ORYNTIUM powered by rhei",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.31.0",
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oryntium/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oryntium/website/issues"
+  },
+  "homepage": "https://oryntium.app"
+}
+
+
+
+
+
+
+

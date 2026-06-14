@@ -1,0 +1,185 @@
+# Copyright (C) 2025 ORYNTIUM
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: ORYNTIUM Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/oryntium\n"
+"Last-Translator: ORYNTIUM Team\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27 12:00+0000\n"
+"PO-Revision-Date: 2025-01-27 12:00+0000\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: oryntium\n"
+
+msgid "Najnowocześniejsza platforma szyfrowania SMS w Polsce"
+msgstr "波兰最先进的短信加密平台"
+
+msgid "Twoje wiadomości pozostają tylko Twoje. Szyfrowanie end-to-end AES-256, indywidualne hasła dla każdego kontaktu, zero chmury."
+msgstr "您的消息只属于您。端到端AES-256加密，每个联系人单独的密码，零云存储。"
+
+msgid "Odkryj możliwości"
+msgstr "探索功能"
+
+msgid "Zobacz jak działa"
+msgstr "查看工作原理"
+
+msgid "FUNKCJE"
+msgstr "功能"
+
+msgid "Szyfrowanie AES-256"
+msgstr "AES-256加密"
+
+msgid "Wojskowy standard szyfrowania z algorytmem AES-256-CBC. Każda wiadomość chroniona na poziomie bankowym."
+msgstr "使用AES-256-CBC算法的军用级加密标准。每条消息都受到银行级保护。"
+
+msgid "Indywidualne hasła"
+msgstr "个人密码"
+
+msgid "Każdy kontakt ma własne unikalne hasło szyfrujące. Maksymalne bezpieczeństwo bez kompromisów."
+msgstr "每个联系人都有自己独特的加密密码。无妥协的最大安全性。"
+
+msgid "Automatyczne przetwarzanie"
+msgstr "自动处理"
+
+msgid "Aplikacja automatycznie szyfruje i deszyfruje wiadomości w tle. Wszystko działa płynnie i bezproblemowo."
+msgstr "应用程序在后台自动加密和解密消息。一切运行流畅无问题。"
+
+msgid "Zero chmury"
+msgstr "零云存储"
+
+msgid "Wszystkie dane przechowywane lokalnie na Twoim urządzeniu. Brak serwerów zewnętrznych, brak ryzyka wycieku."
+msgstr "所有数据本地存储在您的设备上。无外部服务器，无泄漏风险。"
+
+msgid "Ochrona ekranu"
+msgstr "屏幕保护"
+
+msgid "Automatyczna blokada screenshotów z efektem Matrix. Twoje rozmowy pozostają prywatne."
+msgstr "带Matrix效果的自动截图阻止。您的对话保持私密。"
+
+msgid "6 języków"
+msgstr "6种语言"
+
+msgid "Wsparcie dla Polski, Angielskiego, Hiszpańskiego, Niemieckiego, Rosyjskiego i Chińskiego."
+msgstr "支持波兰语、英语、西班牙语、德语、俄语和中文。"
+
+msgid "JAK TO DZIAŁA"
+msgstr "工作原理"
+
+msgid "Utwórz PIN"
+msgstr "创建PIN码"
+
+msgid "Przy pierwszym uruchomieniu ustaw 6-cyfrowy PIN. To Twoja pierwsza linia obrony. Maksymalnie 5 prób logowania dla bezpieczeństwa."
+msgstr "首次启动时设置6位PIN码。这是您的第一道防线。安全起见最多5次登录尝试。"
+
+msgid "Dodaj kontakty"
+msgstr "添加联系人"
+
+msgid "Dla każdego kontaktu ustaw unikalną nazwę, numer telefonu i hasło szyfrujące. Hasła przechowywane w szyfrowanej bazie danych Room."
+msgstr "为每个联系人设置独特的名称、电话号码和加密密码。密码存储在加密的Room数据库中。"
+
+msgid "Wyślij wiadomość"
+msgstr "发送消息"
+
+msgid "Wpisz wiadomość, włącz przełącznik szyfrowania i wyślij. Aplikacja automatycznie zaszyfruje treść używając AES-256 z hasłem kontaktu."
+msgstr "输入消息，启用加密开关并发送。应用程序将使用联系人的密码和AES-256自动加密内容。"
+
+msgid "Odbierz bezpiecznie"
+msgstr "安全接收"
+
+msgid "Przychodzące zaszyfrowane SMS-y (z prefiksem SCRYPT:) są automatycznie deszyfrowane. Widzisz czytelną treść, podczas gdy inne aplikacje pokazują szyfr."
+msgstr "传入的加密短信（带SCRYPT:前缀）会自动解密。您看到可读内容，而其他应用程序显示密码。"
+
+msgid "ZALETY"
+msgstr "优势"
+
+msgid "Pełna prywatność"
+msgstr "完全隐私"
+
+msgid "Twoje wiadomości nigdy nie opuszczają Twojego urządzenia w postaci niezaszyfrowanej."
+msgstr "您的消息永远不会以未加密形式离开您的设备。"
+
+msgid "Zero wiedzy serwerowej"
+msgstr "零服务器知识"
+
+msgid "Brak serwerów zewnętrznych oznacza, że nikt oprócz Ciebie nie ma dostępu do danych."
+msgstr "无外部服务器意味着除了您之外没有人能访问数据。"
+
+msgid "Pełna kontrola"
+msgstr "完全控制"
+
+msgid "Ty decydujesz, które wiadomości szyfrować i z kim się nimi dzielić."
+msgstr "您决定加密哪些消息以及与谁分享。"
+
+msgid "Bez abonamentów"
+msgstr "无订阅"
+
+msgid "Jednorazowy zakup, brak ukrytych opłat, brak subskrypcji. Pełen dostęp na zawsze."
+msgstr "一次性购买，无隐藏费用，无订阅。永久完全访问。"
+
+msgid "Ekologiczne"
+msgstr "环保"
+
+msgid "Brak serwerów chmurowych = mniejszy ślad węglowy i większa efektywność energetyczna."
+msgstr "无云服务器 = 更小的碳足迹和更高的能源效率。"
+
+msgid "Nowoczesna technologia"
+msgstr "现代技术"
+
+msgid "Zbudowane na Jetpack Compose, Kotlin i najnowszych standardach Android 14."
+msgstr "基于Jetpack Compose、Kotlin和最新Android 14标准构建。"
+
+msgid "BEZPIECZEŃSTWO"
+msgstr "安全"
+
+msgid "Algorytmy szyfrowania"
+msgstr "加密算法"
+
+msgid "Szyfrowanie wiadomości na poziomie wojskowym"
+msgstr "军用级消息加密"
+
+msgid "10,000 iteracji derywacji kluczy"
+msgstr "10,000次密钥派生迭代"
+
+msgid "Bezpieczne kodowanie dla formatu SMS"
+msgstr "SMS格式的安全编码"
+
+msgid "Ochrona danych"
+msgstr "数据保护"
+
+msgid "Szyfrowana lokalna baza danych"
+msgstr "加密本地数据库"
+
+msgid "allowBackup=\"false\" - zero chmury"
+msgstr "allowBackup=\"false\" - 零云存储"
+
+msgid "Klucze unikalne dla każdego urządzenia"
+msgstr "每个设备的唯一密钥"
+
+msgid "Format wiadomości"
+msgstr "消息格式"
+
+msgid "Każda zaszyfrowana wiadomość zawiera unikalny wektor inicjalizacji (IV) i sól (Salt) dla maksymalnego bezpieczeństwa."
+msgstr "每条加密消息都包含唯一的初始化向量(IV)和盐值(Salt)以确保最大安全性。"
+
+msgid "Wszystkie prawa zastrzeżone."
+msgstr "版权所有。"
+
+msgid "Powered by"
+msgstr "技术支持"
+
+msgid "Keep it yours. Najnowocześniejsze szyfrowanie SMS."
+msgstr "保持私密。最先进的短信加密。"
+
+msgid "Jeśli widzisz to, jesteś ciekawy!"
+msgstr "如果你看到这个，你很好奇！"
+
+msgid "Spróbuj wpisać kod Konami!"
+msgstr "试试输入科乐美代码！"
+
+
+
+

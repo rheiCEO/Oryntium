@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Dark cyberpunk background -->
+    <path
+        android:fillColor="#0A0A1A"
+        android:pathData="M0,0h108v108h-108z"/>
+    
+    <!-- Outer neon glow (largest - blur simulation) -->
+    <path
+        android:fillColor="#4400BB"
+        android:fillAlpha="0.2"
+        android:pathData="M54,10L90,34L90,74L54,98L18,74L18,34Z"/>
+    
+    <!-- Middle glow layer -->
+    <path
+        android:fillColor="#6600FF"
+        android:fillAlpha="0.4"
+        android:pathData="M54,14L86,36L86,72L54,94L22,72L22,36Z"/>
+    
+    <!-- Inner glow -->
+    <path
+        android:fillColor="#8800FF"
+        android:fillAlpha="0.6"
+        android:pathData="M54,18L82,38L82,70L54,90L26,70L26,38Z"/>
+    
+    <!-- Main cube - LARGER VERSION - Back faces (darker) -->
+    <!-- Back top face -->
+    <path
+        android:fillColor="#5500CC"
+        android:pathData="M54,28L74,42L54,56L34,42Z"/>
+    
+    <!-- Back left face -->
+    <path
+        android:fillColor="#4400AA"
+        android:pathData="M34,42L34,74L54,88L54,56Z"/>
+    
+    <!-- Back right face -->
+    <path
+        android:fillColor="#3300AA"
+        android:pathData="M54,56L54,88L74,74L74,42Z"/>
+    
+    <!-- Main cube - Front faces (BRIGHT NEON) -->
+    <!-- Front top face (purple-blue gradient) -->
+    <path
+        android:fillColor="#BB00FF"
+        android:pathData="M54,22L76,38L54,54L32,38Z"/>
+    
+    <!-- Front left face (cyan neon) -->
+    <path
+        android:fillColor="#00F0FF"
+        android:pathData="M32,38L32,72L54,86L54,54Z"/>
+    
+    <!-- Front right face (purple neon) -->
+    <path
+        android:fillColor="#9900FF"
+        android:pathData="M54,54L54,86L76,72L76,38Z"/>
+    
+    <!-- NEON OUTLINES - thicker for better visibility -->
+    <!-- Top edges - cyan -->
+    <path
+        android:strokeColor="#00FFFF"
+        android:strokeWidth="2.5"
+        android:strokeAlpha="1.0"
+        android:fillColor="#00000000"
+        android:pathData="M54,22L76,38M54,22L32,38"/>
+    
+    <!-- Bottom edges - magenta -->
+    <path
+        android:strokeColor="#FF00FF"
+        android:strokeWidth="2.5"
+        android:strokeAlpha="1.0"
+        android:fillColor="#00000000"
+        android:pathData="M32,72L54,86M54,86L76,72"/>
+    
+    <!-- Vertical edges - purple neon -->
+    <path
+        android:strokeColor="#BB00FF"
+        android:strokeWidth="3"
+        android:strokeAlpha="1.0"
+        android:fillColor="#00000000"
+        android:pathData="M32,38L32,72M54,54L54,86M76,38L76,72"/>
+    
+    <!-- Horizontal middle edge - cyan -->
+    <path
+        android:strokeColor="#00F0FF"
+        android:strokeWidth="3"
+        android:strokeAlpha="1.0"
+        android:fillColor="#00000000"
+        android:pathData="M32,38L54,54L76,38"/>
+    
+    <!-- Center glow point (BRIGHTEST) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="1.0"
+        android:pathData="M54,50 a6,6 0 1,1 0,12 a6,6 0 1,1 0,-12"/>
+    
+    <!-- Smaller inner glow -->
+    <path
+        android:fillColor="#00FFFF"
+        android:fillAlpha="0.8"
+        android:pathData="M54,52 a4,4 0 1,1 0,8 a4,4 0 1,1 0,-8"/>
+    
+    <!-- Neon accent dots (corners) -->
+    <path
+        android:fillColor="#00FFFF"
+        android:fillAlpha="1.0"
+        android:pathData="M54,24 a3,3 0 1,1 0,6 a3,3 0 1,1 0,-6"/>
+    
+    <path
+        android:fillColor="#FF00FF"
+        android:fillAlpha="1.0"
+        android:pathData="M34,40 a2.5,2.5 0 1,1 0,5 a2.5,2.5 0 1,1 0,-5"/>
+    
+    <path
+        android:fillColor="#BB00FF"
+        android:fillAlpha="1.0"
+        android:pathData="M74,40 a2.5,2.5 0 1,1 0,5 a2.5,2.5 0 1,1 0,-5"/>
+    
+    <path
+        android:fillColor="#00F0FF"
+        android:fillAlpha="1.0"
+        android:pathData="M54,84 a2.5,2.5 0 1,1 0,5 a2.5,2.5 0 1,1 0,-5"/>
+    
+    <!-- Additional edge highlights -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.6"
+        android:pathData="M76,38 a2,2 0 1,1 0,4 a2,2 0 1,1 0,-4"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.6"
+        android:pathData="M32,38 a2,2 0 1,1 0,4 a2,2 0 1,1 0,-4"/>
+</vector>

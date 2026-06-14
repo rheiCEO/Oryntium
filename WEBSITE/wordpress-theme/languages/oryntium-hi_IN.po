@@ -1,0 +1,185 @@
+# Copyright (C) 2025 ORYNTIUM
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: ORYNTIUM Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/oryntium\n"
+"Last-Translator: ORYNTIUM Team\n"
+"Language-Team: Hindi\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27 12:00+0000\n"
+"PO-Revision-Date: 2025-01-27 12:00+0000\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: oryntium\n"
+
+msgid "Najnowocześniejsza platforma szyfrowania SMS w Polsce"
+msgstr "पोलैंड में सबसे उन्नत SMS एन्क्रिप्शन प्लेटफॉर्म"
+
+msgid "Twoje wiadomości pozostają tylko Twoje. Szyfrowanie end-to-end AES-256, indywidualne hasła dla każdego kontaktu, zero chmury."
+msgstr "आपके संदेश केवल आपके ही रहते हैं। एंड-टू-एंड AES-256 एन्क्रिप्शन, प्रत्येक संपर्क के लिए व्यक्तिगत पासवर्ड, शून्य क्लाउड।"
+
+msgid "Odkryj możliwości"
+msgstr "सुविधाएं खोजें"
+
+msgid "Zobacz jak działa"
+msgstr "देखें कि यह कैसे काम करता है"
+
+msgid "FUNKCJE"
+msgstr "सुविधाएं"
+
+msgid "Szyfrowanie AES-256"
+msgstr "AES-256 एन्क्रिप्शन"
+
+msgid "Wojskowy standard szyfrowania z algorytmem AES-256-CBC. Każda wiadomość chroniona na poziomie bankowym."
+msgstr "AES-256-CBC एल्गोरिदम के साथ सैन्य-ग्रेड एन्क्रिप्शन। प्रत्येक संदेश बैंकिंग स्तर पर संरक्षित।"
+
+msgid "Indywidualne hasła"
+msgstr "व्यक्तिगत पासवर्ड"
+
+msgid "Każdy kontakt ma własne unikalne hasło szyfrujące. Maksymalne bezpieczeństwo bez kompromisów."
+msgstr "प्रत्येक संपर्क का अपना अनूठा एन्क्रिप्शन पासवर्ड है। बिना समझौता के अधिकतम सुरक्षा।"
+
+msgid "Automatyczne przetwarzanie"
+msgstr "स्वचालित प्रसंस्करण"
+
+msgid "Aplikacja automatycznie szyfruje i deszyfruje wiadomości w tle. Wszystko działa płynnie i bezproblemowo."
+msgstr "एप्लिकेशन पृष्ठभूमि में स्वचालित रूप से संदेशों को एन्क्रिप्ट और डिक्रिप्ट करता है। सब कुछ सुचारू और बिना समस्या के काम करता है।"
+
+msgid "Zero chmury"
+msgstr "शून्य क्लाउड"
+
+msgid "Wszystkie dane przechowywane lokalnie na Twoim urządzeniu. Brak serwerów zewnętrznych, brak ryzyka wycieku."
+msgstr "सभी डेटा आपके डिवाइस पर स्थानीय रूप से संग्रहीत। कोई बाहरी सर्वर नहीं, कोई लीक का जोखिम नहीं।"
+
+msgid "Ochrona ekranu"
+msgstr "स्क्रीन सुरक्षा"
+
+msgid "Automatyczna blokada screenshotów z efektem Matrix. Twoje rozmowy pozostają prywatne."
+msgstr "मैट्रिक्स प्रभाव के साथ स्क्रीनशॉट की स्वचालित ब्लॉकिंग। आपकी बातचीत निजी रहती है।"
+
+msgid "6 języków"
+msgstr "6 भाषाएं"
+
+msgid "Wsparcie dla Polski, Angielskiego, Hiszpańskiego, Niemieckiego, Rosyjskiego i Chińskiego."
+msgstr "पोलिश, अंग्रेजी, स्पेनिश, जर्मन, रूसी और चीनी के लिए समर्थन।"
+
+msgid "JAK TO DZIAŁA"
+msgstr "यह कैसे काम करता है"
+
+msgid "Utwórz PIN"
+msgstr "PIN बनाएं"
+
+msgid "Przy pierwszym uruchomieniu ustaw 6-cyfrowy PIN. To Twoja pierwsza linia obrony. Maksymalnie 5 prób logowania dla bezpieczeństwa."
+msgstr "पहली बार शुरू करने पर 6-अंकीय PIN सेट करें। यह आपकी पहली रक्षा पंक्ति है। सुरक्षा के लिए अधिकतम 5 लॉगिन प्रयास।"
+
+msgid "Dodaj kontakty"
+msgstr "संपर्क जोड़ें"
+
+msgid "Dla każdego kontaktu ustaw unikalną nazwę, numer telefonu i hasło szyfrujące. Hasła przechowywane w szyfrowanej bazie danych Room."
+msgstr "प्रत्येक संपर्क के लिए एक अनूठा नाम, फोन नंबर और एन्क्रिप्शन पासवर्ड सेट करें। पासवर्ड एन्क्रिप्टेड Room डेटाबेस में संग्रहीत।"
+
+msgid "Wyślij wiadomość"
+msgstr "संदेश भेजें"
+
+msgid "Wpisz wiadomość, włącz przełącznik szyfrowania i wyślij. Aplikacja automatycznie zaszyfruje treść używając AES-256 z hasłem kontaktu."
+msgstr "संदेश टाइप करें, एन्क्रिप्शन स्विच चालू करें और भेजें। एप्लिकेशन संपर्क पासवर्ड के साथ AES-256 का उपयोग करके सामग्री को स्वचालित रूप से एन्क्रिप्ट करेगा।"
+
+msgid "Odbierz bezpiecznie"
+msgstr "सुरक्षित रूप से प्राप्त करें"
+
+msgid "Przychodzące zaszyfrowane SMS-y (z prefiksem SCRYPT:) są automatycznie deszyfrowane. Widzisz czytelną treść, podczas gdy inne aplikacje pokazują szyfr."
+msgstr "आने वाले एन्क्रिप्टेड SMS (SCRYPT: उपसर्ग के साथ) स्वचालित रूप से डिक्रिप्ट होते हैं। आप पठनीय सामग्री देखते हैं, जबकि अन्य एप्लिकेशन सिफर दिखाते हैं।"
+
+msgid "ZALETY"
+msgstr "फायदे"
+
+msgid "Pełna prywatność"
+msgstr "पूर्ण गोपनीयता"
+
+msgid "Twoje wiadomości nigdy nie opuszczają Twojego urządzenia w postaci niezaszyfrowanej."
+msgstr "आपके संदेश कभी भी आपके डिवाइस को बिना एन्क्रिप्ट किए नहीं छोड़ते।"
+
+msgid "Zero wiedzy serwerowej"
+msgstr "शून्य सर्वर ज्ञान"
+
+msgid "Brak serwerów zewnętrznych oznacza, że nikt oprócz Ciebie nie ma dostępu do danych."
+msgstr "कोई बाहरी सर्वर नहीं का मतलब है कि आपके अलावा किसी के पास डेटा तक पहुंच नहीं है।"
+
+msgid "Pełna kontrola"
+msgstr "पूर्ण नियंत्रण"
+
+msgid "Ty decydujesz, które wiadomości szyfrować i z kim się nimi dzielić."
+msgstr "आप तय करते हैं कि कौन से संदेश एन्क्रिप्ट करना है और किसके साथ साझा करना है।"
+
+msgid "Bez abonamentów"
+msgstr "बिना सब्सक्रिप्शन के"
+
+msgid "Jednorazowy zakup, brak ukrytych opłat, brak subskrypcji. Pełen dostęp na zawsze."
+msgstr "एक बार का खरीदारी, कोई छुपी फीस नहीं, कोई सब्सक्रिप्शन नहीं। हमेशा के लिए पूर्ण पहुंच।"
+
+msgid "Ekologiczne"
+msgstr "पर्यावरण अनुकूल"
+
+msgid "Brak serwerów chmurowych = mniejszy ślad węglowy i większa efektywność energetyczna."
+msgstr "कोई क्लाउड सर्वर नहीं = छोटा कार्बन फुटप्रिंट और अधिक ऊर्जा दक्षता।"
+
+msgid "Nowoczesna technologia"
+msgstr "आधुनिक तकनीक"
+
+msgid "Zbudowane na Jetpack Compose, Kotlin i najnowszych standardach Android 14."
+msgstr "Jetpack Compose, Kotlin और नवीनतम Android 14 मानकों पर निर्मित।"
+
+msgid "BEZPIECZEŃSTWO"
+msgstr "सुरक्षा"
+
+msgid "Algorytmy szyfrowania"
+msgstr "एन्क्रिप्शन एल्गोरिदम"
+
+msgid "Szyfrowanie wiadomości na poziomie wojskowym"
+msgstr "सैन्य-ग्रेड संदेश एन्क्रिप्शन"
+
+msgid "10,000 iteracji derywacji kluczy"
+msgstr "10,000 कुंजी व्युत्पत्ति पुनरावृत्तियां"
+
+msgid "Bezpieczne kodowanie dla formatu SMS"
+msgstr "SMS प्रारूप के लिए सुरक्षित एन्कोडिंग"
+
+msgid "Ochrona danych"
+msgstr "डेटा सुरक्षा"
+
+msgid "Szyfrowana lokalna baza danych"
+msgstr "एन्क्रिप्टेड स्थानीय डेटाबेस"
+
+msgid "allowBackup=\"false\" - zero chmury"
+msgstr "allowBackup=\"false\" - शून्य क्लाउड"
+
+msgid "Klucze unikalne dla każdego urządzenia"
+msgstr "प्रत्येक डिवाइस के लिए अनूठी कुंजियां"
+
+msgid "Format wiadomości"
+msgstr "संदेश प्रारूप"
+
+msgid "Każda zaszyfrowana wiadomość zawiera unikalny wektor inicjalizacji (IV) i sól (Salt) dla maksymalnego bezpieczeństwa."
+msgstr "प्रत्येक एन्क्रिप्टेड संदेश में अधिकतम सुरक्षा के लिए एक अनूठा प्रारंभीकरण वेक्टर (IV) और नमक (Salt) होता है।"
+
+msgid "Wszystkie prawa zastrzeżone."
+msgstr "सभी अधिकार सुरक्षित।"
+
+msgid "Powered by"
+msgstr "द्वारा संचालित"
+
+msgid "Keep it yours. Najnowocześniejsze szyfrowanie SMS."
+msgstr "इसे अपना रखें। सबसे उन्नत SMS एन्क्रिप्शन।"
+
+msgid "Jeśli widzisz to, jesteś ciekawy!"
+msgstr "यदि आप इसे देख रहे हैं, तो आप जिज्ञासु हैं!"
+
+msgid "Spróbuj wpisać kod Konami!"
+msgstr "कोनामी कोड डालने की कोशिश करें!"
+
+
+
+

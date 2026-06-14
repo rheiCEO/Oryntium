@@ -1,0 +1,183 @@
+# Copyright (C) 2025 ORYNTIUM
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: ORYNTIUM Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/oryntium\n"
+"Last-Translator: ORYNTIUM Team\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27 12:00+0000\n"
+"PO-Revision-Date: 2025-01-27 12:00+0000\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: oryntium\n"
+
+msgid "Najnowocześniejsza platforma szyfrowania SMS w Polsce"
+msgstr "Die fortschrittlichste SMS-Verschlüsselungsplattform in Polen"
+
+msgid "Twoje wiadomości pozostają tylko Twoje. Szyfrowanie end-to-end AES-256, indywidualne hasła dla każdego kontaktu, zero chmury."
+msgstr "Ihre Nachrichten bleiben nur Ihre. Ende-zu-Ende AES-256-Verschlüsselung, individuelle Passwörter für jeden Kontakt, null Cloud."
+
+msgid "Odkryj możliwości"
+msgstr "Funktionen Entdecken"
+
+msgid "Zobacz jak działa"
+msgstr "Sehen Sie Wie Es Funktioniert"
+
+msgid "FUNKCJE"
+msgstr "FUNKTIONEN"
+
+msgid "Szyfrowanie AES-256"
+msgstr "AES-256-Verschlüsselung"
+
+msgid "Wojskowy standard szyfrowania z algorytmem AES-256-CBC. Każda wiadomość chroniona na poziomie bankowym."
+msgstr "Militärstandard-Verschlüsselung mit AES-256-CBC-Algorithmus. Jede Nachricht auf Bankniveau geschützt."
+
+msgid "Indywidualne hasła"
+msgstr "Individuelle Passwörter"
+
+msgid "Każdy kontakt ma własne unikalne hasło szyfrujące. Maksymalne bezpieczeństwo bez kompromisów."
+msgstr "Jeder Kontakt hat sein eigenes einzigartiges Verschlüsselungspasswort. Maximale Sicherheit ohne Kompromisse."
+
+msgid "Automatyczne przetwarzanie"
+msgstr "Automatische Verarbeitung"
+
+msgid "Aplikacja automatycznie szyfruje i deszyfruje wiadomości w tle. Wszystko działa płynnie i bezproblemowo."
+msgstr "Die App verschlüsselt und entschlüsselt Nachrichten automatisch im Hintergrund. Alles läuft reibungslos und problemlos."
+
+msgid "Zero chmury"
+msgstr "Null Cloud"
+
+msgid "Wszystkie dane przechowywane lokalnie na Twoim urządzeniu. Brak serwerów zewnętrznych, brak ryzyka wycieku."
+msgstr "Alle Daten lokal auf Ihrem Gerät gespeichert. Keine externen Server, kein Leckrisiko."
+
+msgid "Ochrona ekranu"
+msgstr "Bildschirmschutz"
+
+msgid "Automatyczna blokada screenshotów z efektem Matrix. Twoje rozmowy pozostają prywatne."
+msgstr "Automatische Screenshot-Sperre mit Matrix-Effekt. Ihre Gespräche bleiben privat."
+
+msgid "6 języków"
+msgstr "6 Sprachen"
+
+msgid "Wsparcie dla Polski, Angielskiego, Hiszpańskiego, Niemieckiego, Rosyjskiego i Chińskiego."
+msgstr "Unterstützung für Polnisch, Englisch, Spanisch, Deutsch, Russisch und Chinesisch."
+
+msgid "JAK TO DZIAŁA"
+msgstr "WIE ES FUNKTIONIERT"
+
+msgid "Utwórz PIN"
+msgstr "PIN Erstellen"
+
+msgid "Przy pierwszym uruchomieniu ustaw 6-cyfrowy PIN. To Twoja pierwsza linia obrony. Maksymalnie 5 prób logowania dla bezpieczeństwa."
+msgstr "Stellen Sie beim ersten Start eine 6-stellige PIN ein. Dies ist Ihre erste Verteidigungslinie. Maximal 5 Anmeldeversuche für Sicherheit."
+
+msgid "Dodaj kontakty"
+msgstr "Kontakte Hinzufügen"
+
+msgid "Dla każdego kontaktu ustaw unikalną nazwę, numer telefonu i hasło szyfrujące. Hasła przechowywane w szyfrowanej bazie danych Room."
+msgstr "Für jeden Kontakt setzen Sie einen eindeutigen Namen, Telefonnummer und Verschlüsselungspasswort. Passwörter in verschlüsselter Room-Datenbank gespeichert."
+
+msgid "Wyślij wiadomość"
+msgstr "Nachricht Senden"
+
+msgid "Wpisz wiadomość, włącz przełącznik szyfrowania i wyślij. Aplikacja automatycznie zaszyfruje treść używając AES-256 z hasłem kontaktu."
+msgstr "Geben Sie eine Nachricht ein, aktivieren Sie den Verschlüsselungsschalter und senden Sie. Die App verschlüsselt automatisch den Inhalt mit AES-256 mit dem Kontaktpasswort."
+
+msgid "Odbierz bezpiecznie"
+msgstr "Sicher Empfangen"
+
+msgid "Przychodzące zaszyfrowane SMS-y (z prefiksem SCRYPT:) są automatycznie deszyfrowane. Widzisz czytelną treść, podczas gdy inne aplikacje pokazują szyfr."
+msgstr "Eingehende verschlüsselte SMS (mit SCRYPT:-Präfix) werden automatisch entschlüsselt. Sie sehen lesbaren Inhalt, während andere Apps Chiffre zeigen."
+
+msgid "ZALETY"
+msgstr "VORTEILE"
+
+msgid "Pełna prywatność"
+msgstr "Vollständige Privatsphäre"
+
+msgid "Twoje wiadomości nigdy nie opuszczają Twojego urządzenia w postaci niezaszyfrowanej."
+msgstr "Ihre Nachrichten verlassen niemals Ihr Gerät in unverschlüsselter Form."
+
+msgid "Zero wiedzy serwerowej"
+msgstr "Null Serverwissen"
+
+msgid "Brak serwerów zewnętrznych oznacza, że nikt oprócz Ciebie nie ma dostępu do danych."
+msgstr "Keine externen Server bedeutet, dass niemand außer Ihnen Zugriff auf die Daten hat."
+
+msgid "Pełna kontrola"
+msgstr "Vollständige Kontrolle"
+
+msgid "Ty decydujesz, które wiadomości szyfrować i z kim się nimi dzielić."
+msgstr "Sie entscheiden, welche Nachrichten zu verschlüsseln und mit wem zu teilen."
+
+msgid "Bez abonamentów"
+msgstr "Ohne Abonnements"
+
+msgid "Jednorazowy zakup, brak ukrytych opłat, brak subskrypcji. Pełen dostęp na zawsze."
+msgstr "Einmaliger Kauf, keine versteckten Gebühren, keine Abonnements. Vollzugriff für immer."
+
+msgid "Ekologiczne"
+msgstr "Umweltfreundlich"
+
+msgid "Brak serwerów chmurowych = mniejszy ślad węglowy i większa efektywność energetyczna."
+msgstr "Keine Cloud-Server = kleinerer CO2-Fußabdruck und höhere Energieeffizienz."
+
+msgid "Nowoczesna technologia"
+msgstr "Moderne Technologie"
+
+msgid "Zbudowane na Jetpack Compose, Kotlin i najnowszych standardach Android 14."
+msgstr "Gebaut auf Jetpack Compose, Kotlin und neuesten Android 14-Standards."
+
+msgid "BEZPIECZEŃSTWO"
+msgstr "SICHERHEIT"
+
+msgid "Algorytmy szyfrowania"
+msgstr "Verschlüsselungsalgorithmen"
+
+msgid "Szyfrowanie wiadomości na poziomie wojskowym"
+msgstr "Militärstandard-Nachrichtenverschlüsselung"
+
+msgid "10,000 iteracji derywacji kluczy"
+msgstr "10.000 Schlüsselableitungsiterationen"
+
+msgid "Bezpieczne kodowanie dla formatu SMS"
+msgstr "Sichere Kodierung für SMS-Format"
+
+msgid "Ochrona danych"
+msgstr "Datenschutz"
+
+msgid "Szyfrowana lokalna baza danych"
+msgstr "Verschlüsselte lokale Datenbank"
+
+msgid "allowBackup=\"false\" - zero chmury"
+msgstr "allowBackup=\"false\" - null Cloud"
+
+msgid "Klucze unikalne dla każdego urządzenia"
+msgstr "Eindeutige Schlüssel für jedes Gerät"
+
+msgid "Format wiadomości"
+msgstr "Nachrichtenformat"
+
+msgid "Każda zaszyfrowana wiadomość zawiera unikalny wektor inicjalizacji (IV) i sól (Salt) dla maksymalnego bezpieczeństwa."
+msgstr "Jede verschlüsselte Nachricht enthält einen eindeutigen Initialisierungsvektor (IV) und Salz (Salt) für maximale Sicherheit."
+
+msgid "Wszystkie prawa zastrzeżone."
+msgstr "Alle Rechte vorbehalten."
+
+msgid "Powered by"
+msgstr "Entwickelt von"
+
+msgid "Keep it yours. Najnowocześniejsze szyfrowanie SMS."
+msgstr "Behalten Sie es für sich. Die fortschrittlichste SMS-Verschlüsselung."
+
+msgid "Jeśli widzisz to, jesteś ciekawy!"
+msgstr "Wenn Sie das sehen, sind Sie neugierig!"
+
+msgid "Spróbuj wpisać kod Konami!"
+msgstr "Versuchen Sie den Konami-Code einzugeben!"
+
+

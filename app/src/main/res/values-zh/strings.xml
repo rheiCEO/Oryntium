@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">ORYNTIUM</string>
+    
+    <!-- PIN Screen -->
+    <string name="enter_pin">输入您的PIN码</string>
+    <string name="create_pin">创建6位PIN码</string>
+    <string name="confirm_pin">确认您的PIN码</string>
+    <string name="pin_mismatch">PIN码不匹配</string>
+    <string name="attempts_remaining">剩余尝试次数：%d</string>
+    <string name="data_will_be_deleted">%d次失败尝试后将删除所有数据</string>
+    
+    <!-- Home Screen -->
+    <string name="secure_messaging">安全消息</string>
+    <string name="quick_sms">短信</string>
+    <string name="contacts">联系人</string>
+    <string name="recent_messages">最近消息</string>
+    <string name="no_messages_yet">还没有消息</string>
+    <string name="send_first_message">发送您的第一条加密消息</string>
+    
+    <!-- Chat Screen -->
+    <string name="encryption_active">加密已激活</string>
+    <string name="encryption">加密</string>
+    <string name="encrypted_message_hint">加密消息…</string>
+    <string name="type_message_hint">输入消息…</string>
+    <string name="encrypted">已加密</string>
+    
+    <!-- Contacts Screen -->
+    <string name="search_contacts">搜索联系人…</string>
+    <string name="no_contacts_yet">还没有联系人</string>
+    <string name="add_first_contact">添加您的第一个联系人以开始安全消息传递</string>
+    <string name="add_contact">添加联系人</string>
+    <string name="edit_contact">编辑联系人</string>
+    <string name="start_conversation">开始对话</string>
+    <string name="send_first_message_chat">发送您的第一条消息</string>
+    <string name="delete_messages">删除消息</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings">设置</string>
+    <string name="configure_app">配置您的应用</string>
+    <string name="security_status">安全状态</string>
+    <string name="all_systems_active">所有系统已激活</string>
+    <string name="sms_permissions">短信权限</string>
+    <string name="all_permissions_granted">已授予所有权限</string>
+    <string name="language_settings">语言设置</string>
+    <string name="change_app_language">更改应用语言</string>
+    <string name="message_storage">消息存储</string>
+    <string name="auto_delete_messages">自动删除消息</string>
+    <string name="subscription_plan">订阅计划</string>
+    <string name="manage_subscription">管理订阅</string>
+    <string name="about_app">关于应用</string>
+    
+    <!-- Dialogs -->
+    <string name="name">姓名</string>
+    <string name="phone_number">电话号码</string>
+    <string name="password">密码</string>
+    <string name="encryption_password">加密密码</string>
+    <string name="password_hint">此密码将用于加密/解密与此联系人的消息</string>
+    <string name="new_password">新密码（留空以保持当前密码）</string>
+    <string name="keep_password_hint">将密码留空以保持当前的加密密码</string>
+    <string name="message">消息</string>
+    <string name="encryption_key">加密密钥（可选）</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="send">发送</string>
+    <string name="delete">删除</string>
+    <string name="delete_contact">删除联系人</string>
+    <string name="delete_contact_confirmation">您确定要删除此联系人吗？与此联系人的所有消息也将被删除。</string>
+    <string name="yes_delete">是的，删除</string>
+    
+    <!-- Delete Options -->
+    <string name="delete_last_hour">删除最后1小时</string>
+    <string name="delete_last_24h">删除最后24小时</string>
+    <string name="delete_last_7d">删除最后7天</string>
+    <string name="delete_last_30d">删除最后30天</string>
+    <string name="delete_all">删除所有消息</string>
+    
+    <!-- Languages -->
+    <string name="language">语言</string>
+    <string name="english">English</string>
+    <string name="polish">Polski</string>
+    <string name="spanish">Español</string>
+    <string name="german">Deutsch</string>
+    <string name="french">Français</string>
+    <string name="chinese">中文</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="arabic">العربية</string>
+    
+    <!-- Storage Duration -->
+    <string name="storage_7_days">7天</string>
+    <string name="storage_30_days">30天</string>
+    <string name="storage_90_days">90天</string>
+    <string name="storage_1_year">1年</string>
+    <string name="storage_unlimited">无限制</string>
+    
+    <!-- Copyright -->
+    <string name="copyright">© 2025 ORYNTIUM powered by rhei</string>
+    
+    <!-- Permissions -->
+    <string name="sms_permissions_required">需要短信权限</string>
+    <string name="permissions_description">要发送加密消息，此应用需要短信权限</string>
+    <string name="grant_permissions">授予权限</string>
+    
+    <!-- Errors -->
+    <string name="error_sending_sms">发送短信时出错</string>
+    <string name="error_encryption">加密消息时出错</string>
+    <string name="error_decryption">解密消息时出错</string>
+    <string name="fill_all_fields">请填写所有字段</string>
+    
+    <!-- Data Deleted -->
+    <string name="data_deleted">数据已删除</string>
+    <string name="data_deleted_message">由于PIN码错误次数过多，所有数据已被永久删除。</string>
+    <string name="ok">确定</string>
+    <string name="security_breach">安全漏洞</string>
+    
+    <!-- Info -->
+    <string name="version">版本</string>
+    <string name="about_description">适用于Android的专业短信加密应用，具有AES-256安全性。\n\n网站：www.oryntium.app</string>
+    <string name="features">特性：</string>
+    <string name="feature_encryption">• 端到端加密</string>
+    <string name="feature_passwords">• 每个联系人的单独密码</string>
+    <string name="feature_storage">• 本地安全存储</string>
+    <string name="feature_cleanup">• 自动清理消息</string>
+    <string name="feature_multilang">• 多语言支持</string>
+    <string name="license">许可证：MIT</string>
+    
+    <!-- Onboarding -->
+    <string name="welcome_title">欢迎使用ORYNTIUM！</string>
+    <string name="welcome_subtitle">您想伪装这个应用吗？</string>
+    <string name="choose_app_name">📱 选择应用名称</string>
+    <string name="app_name_examples">计算器、游戏、音乐…</string>
+    <string name="choose_pin_color">🎨 选择PIN屏幕颜色</string>
+    <string name="continue_button">继续</string>
+    <string name="skip_keep_default">跳过（保持ORYNTIUM）</string>
+    
+    <!-- Disguise App -->
+    <string name="disguise_app">伪装应用</string>
+    <string name="disguise_subtitle">更改名称和PIN颜色\n10个主题可用</string>
+    <string name="language_subtitle">更改应用语言\n当前：%1$s</string>
+    <string name="app_appearance">应用外观</string>
+    <string name="app_name_label">应用名称</string>
+    <string name="custom_name">自定义名称</string>
+    <string name="custom_name_placeholder">计算器、笔记、天气…</string>
+    <string name="color_theme">颜色主题</string>
+    <string name="pin_screen_color">PIN屏幕和图标颜色</string>
+    <string name="preview">预览</string>
+    <string name="icon_will_be">图标将是：%1$s 颜色为 %2$s</string>
+    <string name="save_and_apply">保存并应用</string>
+    <string name="save_and_restart">确定 - 保存并重启</string>
+    <string name="ok_save_language">确定 - 保存语言</string>
+    <string name="back">返回</string>
+    <string name="restart_required_message">应用程序需要重启才能应用语言更改。</string>
+    
+    <!-- Privacy Policy -->
+    <string name="privacy_policy">隐私 &amp; 安全</string>
+    <string name="policy_no_intermediaries">• 无中介 - 直接短信加密</string>
+    <string name="policy_no_storage">• 不在外部服务器上存储数据</string>
+    <string name="policy_local_encryption">• 所有加密都在您的设备上本地进行</string>
+    <string name="policy_encrypted_sms">• 只有加密短信离开您的设备</string>
+    <string name="policy_pin_warning">• 5次PIN码失败后，所有数据将被永久删除</string>
+    <string name="policy_no_recovery">• 无法恢复 - 这是为您的安全而设计的</string>
+</resources>

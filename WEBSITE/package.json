@@ -32,10 +32,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oryntium/website.git"
+    "url": "https://github.com/rheiCEO/Oryntium.git",
+    "directory": "WEBSITE"
   },
   "bugs": {
-    "url": "https://github.com/oryntium/website/issues"
+    "url": "https://github.com/rheiCEO/Oryntium/issues"
   },
   "homepage": "https://oryntium.app"
 }

@@ -1,6 +1,19 @@
-# 🔐 SMS Crypt Pro
+# 🔐 ORYNTIUM — SMS Crypt Pro
+
+> **Strona WWW:** [oryntium.app](https://oryntium.app) · **Repozytorium:** [github.com/rheiCEO/Oryntium](https://github.com/rheiCEO/Oryntium)
 
 Profesjonalna aplikacja Android do szyfrowania wiadomości SMS z pełnym bezpieczeństwem AES-256.
+
+## 🌐 Strona internetowa
+
+Oficjalna strona produktu: **[https://oryntium.app](https://oryntium.app)**
+
+| Element | Lokalizacja w repo |
+|---------|-------------------|
+| Motyw WordPress (produkcja) | `wp-theme/oryntium/` |
+| Wersja statyczna HTML | `WEBSITE/` |
+| Dokumentacja WWW | `website/README.md` |
+| Auto-wdrożenie FTP | `.github/workflows/deploy-website.yml` |
 
 ## ✨ Funkcje
 

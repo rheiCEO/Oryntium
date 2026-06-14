@@ -12,7 +12,7 @@ Oficjalna strona produktu: **[https://oryntium.app](https://oryntium.app)**
 |---------|-------------------|
 | Motyw WordPress (produkcja) | `wp-theme/oryntium/` |
 | Wersja statyczna HTML | `WEBSITE/` |
-| Dokumentacja WWW | `website/README.md` |
+| Dokumentacja WWW | `WEBSITE-REPO.md` |
 | Auto-wdrożenie FTP | `.github/workflows/deploy-website.yml` |
 
 ## ✨ Funkcje

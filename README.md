@@ -15,6 +15,17 @@ Oficjalna strona produktu: **[https://oryntium.app](https://oryntium.app)**
 | Dokumentacja WWW | `WEBSITE-REPO.md` |
 | Auto-wdrożenie FTP | `.github/workflows/deploy-website.yml` |
 
+## 📚 Dokumentacja
+
+| Plik | Opis |
+|------|------|
+| `BUILD_INSTRUCTIONS.md` | Kompilacja aplikacji Android |
+| `JAK_ZROBIC_RELEASE.md` | Budowanie release APK/AAB |
+| `ENCRYPTION_EXPLAINED.md` | Jak działa szyfrowanie |
+| `GOOGLE_PLAY_COMPLIANCE.md` | Wymagania Google Play |
+| `WEBSITE/DEPLOYMENT_GUIDE.md` | Wdrożenie strony WWW |
+| `wp-theme/oryntium/HOSTINGER_INSTALL.md` | Instalacja motywu WordPress |
+
 ## ✨ Funkcje
 
 - **🔒 Szyfrowanie End-to-End**: Wykorzystuje AES-256-CBC z PBKDF2 do generowania kluczy
@@ -58,7 +69,8 @@ Oficjalna strona produktu: **[https://oryntium.app](https://oryntium.app)**
 
 1. **Klonowanie repozytorium**
 ```bash
-cd "D:\APLIKACJA oryntium.app"
+git clone https://github.com/rheiCEO/Oryntium.git
+cd Oryntium
 ```
 
 2. **Otwórz projekt w Android Studio**

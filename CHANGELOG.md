@@ -1,146 +1,59 @@
-# 📝 Changelog - SMS Crypt Pro
+# Changelog
 
-Wszystkie ważne zmiany w projekcie będą dokumentowane w tym pliku.
-
----
-
-## [1.0.0] - 2025-10-11
-
-### 🎉 Pierwsze wydanie
-
-#### ✨ Dodane funkcje:
-- **Szyfrowanie SMS**: AES-256-CBC z PBKDF2-SHA256
-- **PIN 6-cyfrowy**: Zabezpieczenie dostępu z limitem 5 prób
-- **Zarządzanie kontaktami**: Dodawanie, edycja, usuwanie kontaktów
-- **Indywidualne hasła**: Unikalne hasło szyfrujące per kontakt
-- **Automatyczne deszyfrowanie**: Przechwytywanie i deszyfrowanie przychodzących SMS
-- **Quick SMS**: Szybkie wysyłanie zaszyfrowanych wiadomości
-- **Ochrona przed screenshotami**: FLAG_SECURE + Matrix overlay
-- **Wielojęzyczność**: Polski, Angielski, Hiszpański, Niemiecki, Rosyjski, Chiński
-- **Cyberpunk UI**: Ciemny motyw z neonowymi kolorami
-- **Room Database**: Szyfrowana lokalna baza danych
-- **Chat interface**: Wygodny interfejs konwersacji
-- **Usuwanie wiadomości**: Opcje usuwania po czasie (1h, 24h, 7d, 30d, all)
-- **Settings**: Pełny ekran ustawień z pod-ekranami
-
-#### 🔒 Bezpieczeństwo:
-- AES-256-CBC encryption
-- PBKDF2-SHA256 key derivation (10,000 iterations)
-- Local encrypted password storage
-- FLAG_SECURE window protection
-- ProGuard code obfuscation
-- No data transmission to third parties
-- No analytics or tracking
-
-#### 🎨 UI/UX:
-- Material Design 3
-- Jetpack Compose
-- Animowane karty (AnimatedCard)
-- Gradient buttons
-- Obracający się logo (RotatingDiamond)
-- Bottom navigation
-- Smooth animations
-- Responsive layout
-
-#### 📱 Wymagania:
-- Android 11+ (API 30+)
-- Uprawnienia: SEND_SMS, READ_SMS, RECEIVE_SMS
-
-#### 🏗️ Architektura:
-- MVVM + Clean Architecture
-- Dependency Injection (Hilt)
-- Kotlin Coroutines & Flow
-- Room Database
-- BouncyCastle cryptography
-
-#### 📚 Dokumentacja:
-- README.md
-- BUILD_INSTRUCTIONS.md
-- QUICKSTART.md
-- GOOGLE_PLAY_COMPLIANCE.md
-- PROMPT_APLIKACJI.md
+All notable changes to ORYNTIUM are documented here.
 
 ---
 
-## [Planowane funkcje] - Future
+## [1.0.5] — 2025–2026
 
-### 🔮 Roadmap:
+### Current release
 
-#### Wersja 1.1.0:
-- [ ] Backup/Restore kontaktów i wiadomości
-- [ ] Eksport/Import kontaktów do pliku
-- [ ] Czarna lista numerów
+- AES-256-CBC encryption with PBKDF2-SHA256 (10,000 iterations)
+- Per-contact encryption passwords
+- Automatic encrypt/decrypt via `SmsReceiver` / `SmsService`
+- `SMSCRYPT:…SMSEND` message format + multi-part SMS support
+- 6-digit PIN with 5-attempt wipe
+- 8 languages: PL, EN, ES, DE, FR, AR, HI, ZH
+- Jetpack Compose cyberpunk UI
+- Product flavors: oryntium, games, bank, music
+- Screenshot protection (`FLAG_SECURE`)
+- WorkManager message cleanup
+- Target SDK 35, min SDK 29
+
+### Architecture
+
+- Kotlin · MVVM · Hilt · Room · DataStore · BouncyCastle
+
+---
+
+## [1.0.0] — 2025-10-11
+
+Initial public release — core SMS encryption, contacts, chat, settings.
+
+---
+
+## Roadmap
+
+### v1.1
+- [ ] Contact backup / restore
+- [ ] Import from phone contacts
 - [ ] Scheduled messages
-- [ ] Grupowe wiadomości
 
-#### Wersja 1.2.0:
-- [ ] Biometric authentication (fingerprint/face)
-- [ ] Multiple PIN support
-- [ ] Contact groups
-- [ ] Message templates
-- [ ] Custom encryption algorithms
-
-#### Wersja 2.0.0:
-- [ ] Cloud sync (opcjonalne)
-- [ ] Multi-device support
-- [ ] Web dashboard
-- [ ] Premium subscription features
-- [ ] Advanced analytics
+### v1.2
+- [ ] Biometric unlock
+- [ ] SQLCipher for Room encryption at rest
 
 ---
 
-## 🐛 Known Issues
+## Stats (v1.0.5)
 
-### Wersja 1.0.0:
-- Brak: Wszystkie funkcje działają poprawnie
-- ⚠️ Testowanie wymagane na różnych wersjach Android
-
----
-
-## 📊 Statistics
-
-### Wersja 1.0.0:
-- **Plików kodu**: ~50+
-- **Linie kodu**: ~5000+
-- **Ekrany**: 10+
-- **Języki**: 6
-- **Rozmiar APK**: ~5-7 MB
-- **Min SDK**: 30
-- **Target SDK**: 34
+| Metric | Value |
+|--------|-------|
+| Kotlin source files | ~50 |
+| Screens | 10+ |
+| APK size (release) | ~8–15 MB |
+| Min / Target SDK | 29 / 35 |
 
 ---
 
-## 🙏 Credits
-
-**Developed by**: ORYNTIUM powered by rhei  
-**Year**: 2025  
-**License**: MIT  
-**Technology**: Kotlin, Jetpack Compose, Room, Hilt, BouncyCastle
-
----
-
-## 📞 Support
-
-Aby zgłosić błąd lub zaproponować funkcję:
-1. Utwórz issue na GitHub (jeśli publiczne repo)
-2. Skontaktuj się: [your-email@example.com]
-3. Discord community: [link]
-
----
-
-**Ostatnia aktualizacja**: 2025-10-11  
-**Autor**: ORYNTIUM powered by rhei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+© 2025–2026 ORYNTIUM · [rheiCEO](https://github.com/rheiCEO)

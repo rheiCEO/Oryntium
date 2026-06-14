@@ -189,7 +189,7 @@ Oryntium/
 3. Open the APK and install
 4. Launch **ORYNTIUM**, set PIN, grant SMS permissions
 
-> Debug build for testing. For production, build a signed release locally — see [JAK_ZROBIC_RELEASE.md](JAK_ZROBIC_RELEASE.md).
+> Debug build for testing. For production, build a signed release locally — see [RELEASE.md](RELEASE.md).
 
 ---
 
@@ -309,8 +309,8 @@ ORYNTIUM ships as one codebase with multiple **product flavors** — same engine
 | Guide | Description |
 |-------|-------------|
 | [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) | Full Android build guide |
-| [JAK_ZROBIC_RELEASE.md](JAK_ZROBIC_RELEASE.md) | Signed release APK / AAB |
-| [ENCRYPTION_EXPLAINED.md](ENCRYPTION_EXPLAINED.md) | Encryption internals (PL) |
+| [RELEASE.md](RELEASE.md) | Signed release APK / AAB |
+| [ENCRYPTION_EXPLAINED.md](ENCRYPTION_EXPLAINED.md) | Encryption internals |
 | [GOOGLE_PLAY_COMPLIANCE.md](GOOGLE_PLAY_COMPLIANCE.md) | Play Store policy notes |
 | [WEBSITE-REPO.md](WEBSITE-REPO.md) | Website repo & deploy info |
 | [wp-theme/oryntium/HOSTINGER_INSTALL.md](wp-theme/oryntium/HOSTINGER_INSTALL.md) | WordPress theme install |

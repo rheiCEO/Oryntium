@@ -1,11 +1,14 @@
 package com.smscrypt.pro.ui.screens.contacts
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.smscrypt.pro.R
 import com.smscrypt.pro.crypto.EncryptionManager
 import com.smscrypt.pro.data.database.ContactDao
 import com.smscrypt.pro.data.model.Contact
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -25,6 +28,7 @@ data class ContactsUiState(
 
 @HiltViewModel
 class ContactsViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
     private val contactDao: ContactDao,
     private val encryptionManager: EncryptionManager
 ) : ViewModel() {
@@ -111,6 +115,10 @@ class ContactsViewModel @Inject constructor(
             )
         }
     }
+
+    fun clearError() {
+        _uiState.update { it.copy(error = null) }
+    }
     
     fun addContact(name: String, phoneNumber: String, password: String) {
         viewModelScope.launch {
@@ -124,11 +132,13 @@ class ContactsViewModel @Inject constructor(
                 contactDao.insertContact(contact)
                 hideAddContactDialog()
             } catch (e: Exception) {
-                _uiState.update { it.copy(error = "Error adding contact: ${e.message}") }
+                _uiState.update {
+                    it.copy(error = context.getString(R.string.error_generic, e.message ?: ""))
+                }
             }
         }
     }
-    
+
     fun updateContact(contactId: String, name: String, phoneNumber: String, newPassword: String?) {
         viewModelScope.launch {
             try {
@@ -150,22 +160,26 @@ class ContactsViewModel @Inject constructor(
                     hideEditContactDialog()
                 }
             } catch (e: Exception) {
-                _uiState.update { it.copy(error = "Error updating contact: ${e.message}") }
+                _uiState.update {
+                    it.copy(error = context.getString(R.string.error_generic, e.message ?: ""))
+                }
             }
         }
     }
-    
+
     fun deleteContact(contactId: String) {
         viewModelScope.launch {
             try {
                 contactDao.deleteContact(contactId)
                 hideDeleteConfirmDialog()
             } catch (e: Exception) {
-                _uiState.update { it.copy(error = "Error deleting contact: ${e.message}") }
+                _uiState.update {
+                    it.copy(error = context.getString(R.string.error_generic, e.message ?: ""))
+                }
             }
         }
     }
-    
+
     fun confirmDeleteContact() {
         _uiState.value.contactToDelete?.let { contact ->
             deleteContact(contact.id)

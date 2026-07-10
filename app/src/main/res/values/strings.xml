@@ -9,6 +9,9 @@
     <string name="attempts_remaining">Attempts remaining: %d</string>
     <string name="data_will_be_deleted">All data will be deleted after %d failed attempts</string>
     
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+
     <!-- Home Screen -->
     <string name="secure_messaging">Secure messaging</string>
     <string name="quick_sms">SMS</string>
@@ -64,7 +67,7 @@
     <string name="send">Send</string>
     <string name="delete">Delete</string>
     <string name="delete_contact">Delete Contact</string>
-    <string name="delete_contact_confirmation">Are you sure you want to delete this contact? All messages with this contact will also be deleted.</string>
+    <string name="delete_contact_confirmation">Are you sure you want to delete %1$s? All messages with this contact will also be deleted.</string>
     <string name="yes_delete">Yes, Delete</string>
     
     <!-- Delete Options -->
@@ -104,6 +107,7 @@
     <string name="error_sending_sms">Error sending SMS</string>
     <string name="error_encryption">Error encrypting message</string>
     <string name="error_decryption">Error decrypting message</string>
+    <string name="error_generic">Something went wrong: %1$s</string>
     <string name="fill_all_fields">Please fill all fields</string>
     
     <!-- Data Deleted -->

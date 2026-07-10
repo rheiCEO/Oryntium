@@ -35,7 +35,9 @@ object WorkManagerInitializer {
         
         WorkManager.getInstance(context).enqueueUniquePeriodicWork(
             MessageCleanupWorker.WORK_NAME,
-            ExistingPeriodicWorkPolicy.KEEP, // Zachowaj istniejącą pracę jeśli już jest
+            // UPDATE zamiast KEEP — po zmianie interwału/constraintów harmonogram jest aktualizowany,
+            // a nie ignorowany (stary KEEP zostawiał nieaktualną, wcześniej zaplanowaną pracę).
+            ExistingPeriodicWorkPolicy.UPDATE,
             cleanupRequest
         )
     }

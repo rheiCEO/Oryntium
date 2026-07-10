@@ -9,6 +9,9 @@
     <string name="attempts_remaining">Pozostało prób: %d</string>
     <string name="data_will_be_deleted">Wszystkie dane zostaną usunięte po %d nieudanych próbach</string>
     
+    <!-- Navigation -->
+    <string name="nav_home">Główna</string>
+
     <!-- Home Screen -->
     <string name="secure_messaging">Bezpieczne wiadomości</string>
     <string name="quick_sms">SMS</string>
@@ -64,7 +67,7 @@
     <string name="send">Wyślij</string>
     <string name="delete">Usuń</string>
     <string name="delete_contact">Usuń kontakt</string>
-    <string name="delete_contact_confirmation">Czy na pewno chcesz usunąć ten kontakt? Wszystkie wiadomości z tym kontaktem również zostaną usunięte.</string>
+    <string name="delete_contact_confirmation">Czy na pewno chcesz usunąć %1$s? Wszystkie wiadomości z tym kontaktem również zostaną usunięte.</string>
     <string name="yes_delete">Tak, usuń</string>
     
     <!-- Delete Options -->
@@ -104,6 +107,7 @@
     <string name="error_sending_sms">Błąd podczas wysyłania SMS</string>
     <string name="error_encryption">Błąd szyfrowania wiadomości</string>
     <string name="error_decryption">Błąd deszyfrowania wiadomości</string>
+    <string name="error_generic">Coś poszło nie tak: %1$s</string>
     <string name="fill_all_fields">Proszę wypełnić wszystkie pola</string>
     
     <!-- Data Deleted -->
@@ -132,8 +136,19 @@
     <string name="policy_pin_warning">• Po 5 nieudanych próbach PIN, WSZYSTKIE DANE ZOSTANĄ TRWALE USUNIĘTE</string>
     <string name="policy_no_recovery">• Brak możliwości odzyskania - to celowy element zabezpieczeń</string>
     
+    <!-- Onboarding -->
+    <string name="welcome_title">Witaj w ORYNTIUM!</string>
+    <string name="welcome_subtitle">Czy chcesz ukryć tę aplikację?</string>
+    <string name="choose_app_name">📱 Wybierz nazwę aplikacji</string>
+    <string name="app_name_examples">Kalkulator, Gry, Muzyka…</string>
+    <string name="choose_pin_color">🎨 Wybierz kolor ekranu PIN</string>
+    <string name="continue_button">DALEJ</string>
+    <string name="skip_keep_default">Pomiń (zachowaj ORYNTIUM)</string>
+
     <!-- Disguise App -->
     <string name="disguise_app">Ukryj Aplikację</string>
+    <string name="disguise_subtitle">Zmień nazwę i kolory PIN\n10 dostępnych motywów</string>
+    <string name="language_subtitle">Zmień język aplikacji\nObecny: %1$s</string>
     <string name="app_appearance">Wygląd Aplikacji</string>
     <string name="app_name_label">Nazwa Aplikacji</string>
     <string name="custom_name">Własna nazwa</string>
@@ -141,6 +156,7 @@
     <string name="color_theme">Motyw Kolorystyczny</string>
     <string name="pin_screen_color">Kolor ekranu PIN i ikony</string>
     <string name="preview">Podgląd</string>
+    <string name="icon_will_be">Ikona będzie: %1$s w kolorze %2$s</string>
     <string name="save_and_apply">ZAPISZ I ZASTOSUJ</string>
     <string name="save_and_restart">OK - ZAPISZ I RESTART</string>
     <string name="ok_save_language">OK - ZAPISZ JĘZYK</string>

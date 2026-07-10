@@ -16,6 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.smscrypt.pro.data.model.SmsMessage
+import com.smscrypt.pro.ui.components.ErrorSnackbarEffect
 import androidx.compose.ui.res.stringResource
 import com.smscrypt.pro.R
 import java.text.SimpleDateFormat
@@ -30,6 +31,13 @@ fun ChatScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val listState = rememberLazyListState()
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    ErrorSnackbarEffect(
+        error = uiState.error,
+        snackbarHostState = snackbarHostState,
+        onDismiss = viewModel::clearError
+    )
     
     LaunchedEffect(phoneNumber) {
         viewModel.loadChat(phoneNumber)
@@ -43,6 +51,7 @@ fun ChatScreen(
     }
     
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {

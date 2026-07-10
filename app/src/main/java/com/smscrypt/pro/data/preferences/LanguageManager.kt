@@ -59,6 +59,18 @@ class LanguageManager(private val context: Context) {
     fun getLocale(languageCode: String): Locale {
         return Locale(languageCode)
     }
+
+    /**
+     * Czyści zapisany język (DataStore + synchroniczne SharedPreferences).
+     * Wywoływane przy pełnym wipe danych.
+     */
+    suspend fun clear() {
+        context.languageDataStore.edit { it.clear() }
+        context.getSharedPreferences("language_prefs_sync", Context.MODE_PRIVATE)
+            .edit()
+            .clear()
+            .apply()
+    }
 }
 
 

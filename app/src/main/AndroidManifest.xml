@@ -7,9 +7,6 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     
-    <!-- Contacts Permission - Optional -->
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    
     <!-- Phone State Permission - For SMS functionality -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     
@@ -52,12 +49,6 @@
             </intent-filter>
         </receiver>
 
-        <!-- Service for background SMS handling -->
-        <service
-            android:name=".service.SmsService"
-            android:enabled="true"
-            android:exported="false" />
-        
         <!-- Disable default WorkManager initialization - using Hilt -->
         <provider
             android:name="androidx.startup.InitializationProvider"

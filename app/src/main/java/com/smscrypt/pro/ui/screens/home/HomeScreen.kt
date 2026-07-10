@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.smscrypt.pro.data.model.SmsMessage
 import com.smscrypt.pro.ui.components.AnimatedCard
+import com.smscrypt.pro.ui.components.ErrorSnackbarEffect
 import com.smscrypt.pro.ui.components.GradientButton
 import com.smscrypt.pro.ui.components.RotatingDiamond
 import androidx.compose.ui.res.stringResource
@@ -33,12 +34,20 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    ErrorSnackbarEffect(
+        error = uiState.error,
+        snackbarHostState = snackbarHostState,
+        onDismiss = viewModel::clearError
+    )
     
     // Neon gradient colors
     val neonPurple = Color(0xFFBB00FF)
     val neonBlue = Color(0xFF00F0FF)
     
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {

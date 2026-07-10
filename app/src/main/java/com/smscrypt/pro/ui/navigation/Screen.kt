@@ -13,7 +13,6 @@ sealed class Screen(val route: String) {
     object AppAppearance : Screen("app_appearance")
     object Language : Screen("language")
     object Storage : Screen("storage")
-    object Subscription : Screen("subscription")
     object Info : Screen("info")
 }
 

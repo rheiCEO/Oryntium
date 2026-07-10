@@ -21,8 +21,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
+import com.smscrypt.pro.R
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -36,6 +38,9 @@ import kotlinx.coroutines.flow.first
 import com.smscrypt.pro.ui.navigation.Screen
 import com.smscrypt.pro.ui.navigation.SmsCryptNavigation
 import com.smscrypt.pro.ui.theme.SmsCryptProTheme
+import com.smscrypt.pro.ui.LocalSmsPermissions
+import com.smscrypt.pro.ui.SmsPermissionState
+import com.smscrypt.pro.utils.SmsPermissions
 import com.smscrypt.pro.utils.ScreenshotProtection
 import com.smscrypt.pro.utils.LocaleHelper
 import dagger.hilt.android.AndroidEntryPoint
@@ -64,11 +69,12 @@ class MainActivity : ComponentActivity() {
     
     private var backgroundTimestamp: Long = 0L
     private var requiresPinCheck = mutableStateOf(false)
-    
+    private val smsPermissionsGranted = mutableStateOf(false)
+
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
-    ) { permissions ->
-        // Handle permissions result
+    ) {
+        smsPermissionsGranted.value = SmsPermissions.hasAll(this)
     }
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,14 +82,23 @@ class MainActivity : ComponentActivity() {
         
         // Enable screenshot protection
         ScreenshotProtection.enableScreenshotProtection(this)
-        
-        // Start directly with PIN screen (no onboarding)
+
+        smsPermissionsGranted.value = SmsPermissions.hasAll(this)
+
         setContent {
-            SmsCryptProTheme {
-                MainScreen(
-                    startDestination = Screen.Pin.route,
-                    requiresPinCheck = requiresPinCheck
+            val hasSmsPermissions by smsPermissionsGranted
+            CompositionLocalProvider(
+                LocalSmsPermissions provides SmsPermissionState(
+                    hasAllPermissions = hasSmsPermissions,
+                    requestPermissions = { checkAndRequestPermissions() }
                 )
+            ) {
+                SmsCryptProTheme {
+                    MainScreen(
+                        startDestination = Screen.Pin.route,
+                        requiresPinCheck = requiresPinCheck
+                    )
+                }
             }
         }
         
@@ -99,6 +114,7 @@ class MainActivity : ComponentActivity() {
     override fun onResume() {
         super.onResume()
         ScreenshotProtection.enableScreenshotProtection(this)
+        smsPermissionsGranted.value = SmsPermissions.hasAll(this)
         
         // Check if app was in background for more than 20 seconds
         if (backgroundTimestamp > 0) {
@@ -110,19 +126,11 @@ class MainActivity : ComponentActivity() {
     }
     
     private fun checkAndRequestPermissions() {
-        val permissions = arrayOf(
-            Manifest.permission.SEND_SMS,
-            Manifest.permission.READ_SMS,
-            Manifest.permission.RECEIVE_SMS,
-            Manifest.permission.READ_PHONE_STATE
-        )
-        
-        val permissionsToRequest = permissions.filter {
-            ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
-        }
-        
+        val permissionsToRequest = SmsPermissions.missing(this)
         if (permissionsToRequest.isNotEmpty()) {
             permissionLauncher.launch(permissionsToRequest.toTypedArray())
+        } else {
+            smsPermissionsGranted.value = true
         }
     }
 }
@@ -222,9 +230,9 @@ fun BottomNavigationBar(
     onNavigate: (String) -> Unit
 ) {
     val items = listOf(
-        BottomNavItem(Screen.Home.route, "Home", Icons.Default.Home),
-        BottomNavItem(Screen.Contacts.route, "Contacts", Icons.Default.Person),
-        BottomNavItem(Screen.Settings.route, "Settings", Icons.Default.Settings)
+        BottomNavItem(Screen.Home.route, stringResource(R.string.nav_home), Icons.Default.Home),
+        BottomNavItem(Screen.Contacts.route, stringResource(R.string.contacts), Icons.Default.Person),
+        BottomNavItem(Screen.Settings.route, stringResource(R.string.settings), Icons.Default.Settings)
     )
     
     NavigationBar(
@@ -240,10 +248,18 @@ fun BottomNavigationBar(
                     )
                 },
                 label = { Text(item.label) },
-                selected = currentRoute == item.route || 
-                          (item.route == Screen.Home.route && currentRoute?.contains("home") == true) ||
-                          (item.route == Screen.Contacts.route && currentRoute?.contains("contact") == true) ||
-                          (item.route == Screen.Settings.route && currentRoute?.contains("settings|language|storage|subscription|info") == true),
+                selected = when (item.route) {
+                    Screen.Home.route -> currentRoute?.startsWith("home") == true || currentRoute?.startsWith("chat") == true
+                    Screen.Contacts.route -> currentRoute?.startsWith("contact") == true
+                    Screen.Settings.route -> currentRoute in listOf(
+                        Screen.Settings.route,
+                        Screen.Language.route,
+                        Screen.Storage.route,
+                        Screen.Info.route,
+                        Screen.AppAppearance.route
+                    )
+                    else -> currentRoute == item.route
+                },
                 onClick = { 
                     // Always navigate to route and clear back stack
                     onNavigate(item.route)

@@ -40,6 +40,11 @@ class StorageManager(private val context: Context) {
             preferences[CUSTOM_MINUTES_KEY] = customMinutes
         }
     }
+
+    /** Czyści ustawienia przechowywania (wywoływane przy pełnym wipe danych). */
+    suspend fun clear() {
+        context.storageDataStore.edit { it.clear() }
+    }
 }
 
 

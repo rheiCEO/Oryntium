@@ -23,8 +23,8 @@ android {
         applicationId = "com.smscrypt.pro"
         minSdk = 29
         targetSdk = 35  // zmienione na 35
-        versionCode = 2
-        versionName = "1.0.5"
+        versionCode = 3
+        versionName = "1.0.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -102,6 +102,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {

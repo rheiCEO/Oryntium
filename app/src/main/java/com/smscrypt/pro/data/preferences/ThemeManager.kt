@@ -61,6 +61,11 @@ class ThemeManager @Inject constructor(
             preferences[ONBOARDING_COMPLETED_KEY] = completed
         }
     }
+
+    /** Czyści motyw, nazwę i stan onboardingu (wywoływane przy pełnym wipe danych). */
+    suspend fun clear() {
+        context.themeDataStore.edit { it.clear() }
+    }
     
     suspend fun changeAppAlias(aliasName: String) {
         context.themeDataStore.edit { preferences ->

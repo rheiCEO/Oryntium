@@ -16,6 +16,13 @@
 -keep class javax.inject.** { *; }
 -keep class * extends dagger.hilt.android.lifecycle.HiltViewModel
 
+# Keep WorkManager + Hilt Worker (bez tego cleanup worker nie wstrzykuje się w release)
+-keep class * extends androidx.work.ListenableWorker { *; }
+-keep class * extends androidx.work.CoroutineWorker { *; }
+-keep @androidx.hilt.work.HiltWorker class * { *; }
+-keep class androidx.hilt.work.** { *; }
+-keep class * extends androidx.hilt.work.WorkerAssistedFactory { *; }
+
 # Keep Compose
 -keep class androidx.compose.** { *; }
 -dontwarn androidx.compose.**

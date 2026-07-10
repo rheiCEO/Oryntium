@@ -30,12 +30,14 @@ class SmsReceiver : BroadcastReceiver() {
     lateinit var smsDao: SmsDao
     
     private val receiverScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
-    
-    // Buffer for multi-part SMS
-    private val multiPartBuffer = mutableMapOf<String, MutableMap<Int, String>>() // sender -> (partNumber -> content)
-    
+
     companion object {
         const val TAG = "SmsReceiver"
+
+        // Bufor części wiadomości wieloczęściowych. MUSI być statyczny (companion), bo system
+        // tworzy nową instancję BroadcastReceivera dla każdego dostarczenia — pole instancji
+        // gubiłoby wcześniejsze części. Klucz: nadawca -> (numer części -> treść).
+        private val multiPartBuffer = mutableMapOf<String, MutableMap<Int, String>>()
     }
     
     override fun onReceive(context: Context?, intent: Intent?) {
@@ -59,8 +61,9 @@ class SmsReceiver : BroadcastReceiver() {
     
     private suspend fun processIncomingSms(sender: String, messageBody: String) {
         try {
-            Log.d(TAG, "📱 Processing SMS from: $sender")
-            Log.d(TAG, "📝 Message starts with: ${messageBody.take(50)}...")
+            if (com.smscrypt.pro.BuildConfig.DEBUG) {
+                Log.d(TAG, "📱 Processing SMS from: $sender")
+            }
             
             // Check for multi-part SMS markers (START/END)
             val finalMessage = handleMultiPartSms(sender, messageBody)
@@ -128,7 +131,10 @@ class SmsReceiver : BroadcastReceiver() {
                         // Decrypt message
                         val decryptedMessage = try {
                             val result = encryptionManager.decrypt(finalMessage, password)
-                            Log.d(TAG, "✅ Message decrypted successfully: ${result.take(50)}...")
+                            // Nie logujemy treści wiadomości nawet w skróconej formie — wyciek do logcat.
+                            if (com.smscrypt.pro.BuildConfig.DEBUG) {
+                                Log.d(TAG, "✅ Message decrypted successfully")
+                            }
                             result
                         } catch (e: Exception) {
                             Log.e(TAG, "❌ Failed to decrypt message: ${e.message}", e)
@@ -195,7 +201,7 @@ class SmsReceiver : BroadcastReceiver() {
      * Handles multi-part SMS with START/END markers
      * Returns complete message when all parts received, null otherwise
      */
-    private fun handleMultiPartSms(sender: String, messageBody: String): String? {
+    private fun handleMultiPartSms(sender: String, messageBody: String): String? = synchronized(multiPartBuffer) {
         // Check for START marker
         val startMatch = Regex("^START (\\d+)/(\\d+) ").find(messageBody)
         if (startMatch != null) {

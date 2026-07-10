@@ -1,25 +1,40 @@
 package com.smscrypt.pro.data.preferences
 
 import android.content.Context
+import android.util.Base64
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.smscrypt.pro.crypto.EncryptionManager
 import com.smscrypt.pro.data.database.AppDatabase
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import java.security.SecureRandom
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.PBEKeySpec
 
 private val Context.pinDataStore by preferencesDataStore(name = "pin_prefs")
 
 class PinManager(
     private val context: Context,
-    private val database: AppDatabase
+    private val database: AppDatabase,
+    private val encryptionManager: EncryptionManager,
+    private val languageManager: LanguageManager,
+    private val storageManager: StorageManager,
+    private val themeManager: ThemeManager
 ) {
     
     companion object {
         private val PIN_HASH = stringPreferencesKey("pin_hash")
         private val FAILED_ATTEMPTS = intPreferencesKey("failed_attempts")
         private const val MAX_ATTEMPTS = 5
+
+        // Format PBKDF2: "pbkdf2$<iteracje>$<salt_base64>$<hash_base64>"
+        private const val PBKDF2_PREFIX = "pbkdf2"
+        private const val PBKDF2_ITERATIONS = 120_000
+        private const val PBKDF2_KEY_LENGTH = 256
+        private const val PBKDF2_SALT_LENGTH = 16
     }
     
     /**
@@ -31,10 +46,10 @@ class PinManager(
     }
     
     /**
-     * Sets the PIN (stores hash)
+     * Ustawia PIN (zapisuje hash PBKDF2 z losową solą — nie da się go odwrócić brute-forcem tęczowych tablic).
      */
     suspend fun setPin(pin: String) {
-        val hash = hashPin(pin)
+        val hash = hashPinPbkdf2(pin)
         context.pinDataStore.edit { preferences ->
             preferences[PIN_HASH] = hash
             preferences[FAILED_ATTEMPTS] = 0
@@ -50,13 +65,15 @@ class PinManager(
         val prefs = context.pinDataStore.data.first()
         val storedHash = prefs[PIN_HASH] ?: return false
         val failedAttempts = prefs[FAILED_ATTEMPTS] ?: 0
-        
-        val hash = hashPin(pin)
-        
-        if (hash == storedHash) {
-            // Correct PIN - reset failed attempts
+
+        if (verifyAgainst(pin, storedHash)) {
+            // Poprawny PIN — zeruj licznik prób
             context.pinDataStore.edit { preferences ->
                 preferences[FAILED_ATTEMPTS] = 0
+                // Migracja starego formatu (goły SHA-256) na PBKDF2 przy pierwszym poprawnym logowaniu
+                if (!storedHash.startsWith("$PBKDF2_PREFIX$")) {
+                    preferences[PIN_HASH] = hashPinPbkdf2(pin)
+                }
             }
             return true
         } else {
@@ -100,15 +117,18 @@ class PinManager(
             context.pinDataStore.edit { it.clear() }
             android.util.Log.d("PinManager", "✅ PIN cleared")
             
-            // 3. Clear encryption preferences (device key)
-            val encryptionDataStore = context.dataStore
-            encryptionDataStore.edit { it.clear() }
+            // 3. Clear encryption preferences (device key) + klucz owijający w Android Keystore
+            encryptionManager.clearKeys()
             android.util.Log.d("PinManager", "✅ Encryption keys cleared")
             
             // 4. Clear language preferences
-            val languageDataStore = context.languageDataStore
-            languageDataStore.edit { it.clear() }
+            languageManager.clear()
             android.util.Log.d("PinManager", "✅ Language preferences cleared")
+
+            // 5. Clear storage + theme preferences (pełny wipe — nie zostawiaj ustawień retencji ani kamuflażu)
+            storageManager.clear()
+            themeManager.clear()
+            android.util.Log.d("PinManager", "✅ Storage & theme preferences cleared")
             
             android.util.Log.d("PinManager", "🎉 ALL DATA CLEARED SUCCESSFULLY!")
             
@@ -119,17 +139,57 @@ class PinManager(
     }
     
     /**
-     * Simple PIN hashing (using SHA-256)
+     * Weryfikuje PIN względem zapisanego hasha. Obsługuje nowy format PBKDF2 oraz stary (goły SHA-256).
      */
-    private fun hashPin(pin: String): String {
-        val bytes = pin.toByteArray()
+    private fun verifyAgainst(pin: String, storedHash: String): Boolean {
+        return if (storedHash.startsWith("$PBKDF2_PREFIX$")) {
+            val parts = storedHash.split("$")
+            if (parts.size != 4) return false
+            val iterations = parts[1].toIntOrNull() ?: return false
+            val salt = Base64.decode(parts[2], Base64.NO_WRAP)
+            val expected = Base64.decode(parts[3], Base64.NO_WRAP)
+            val actual = pbkdf2(pin, salt, iterations, expected.size * 8)
+            constantTimeEquals(expected, actual)
+        } else {
+            // Stary format: goły SHA-256 (hex). Porównanie w stałym czasie.
+            val legacy = legacySha256(pin)
+            constantTimeEquals(legacy.toByteArray(), storedHash.toByteArray())
+        }
+    }
+
+    /**
+     * Hashuje PIN algorytmem PBKDF2-HMAC-SHA256 z losową solą.
+     * Zwraca string w formacie: "pbkdf2$<iteracje>$<salt_base64>$<hash_base64>".
+     */
+    private fun hashPinPbkdf2(pin: String): String {
+        val salt = ByteArray(PBKDF2_SALT_LENGTH)
+        SecureRandom().nextBytes(salt)
+        val hash = pbkdf2(pin, salt, PBKDF2_ITERATIONS, PBKDF2_KEY_LENGTH)
+        val saltB64 = Base64.encodeToString(salt, Base64.NO_WRAP)
+        val hashB64 = Base64.encodeToString(hash, Base64.NO_WRAP)
+        return "$PBKDF2_PREFIX$$PBKDF2_ITERATIONS$$saltB64$$hashB64"
+    }
+
+    private fun pbkdf2(pin: String, salt: ByteArray, iterations: Int, keyLengthBits: Int): ByteArray {
+        val spec = PBEKeySpec(pin.toCharArray(), salt, iterations, keyLengthBits)
+        val factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256")
+        return factory.generateSecret(spec).encoded
+    }
+
+    private fun legacySha256(pin: String): String {
         val md = java.security.MessageDigest.getInstance("SHA-256")
-        val digest = md.digest(bytes)
-        return digest.joinToString("") { "%02x".format(it) }
+        return md.digest(pin.toByteArray()).joinToString("") { "%02x".format(it) }
+    }
+
+    /** Porównanie bajtów w stałym czasie — chroni przed atakami czasowymi. */
+    private fun constantTimeEquals(a: ByteArray, b: ByteArray): Boolean {
+        if (a.size != b.size) return false
+        var result = 0
+        for (i in a.indices) {
+            result = result or (a[i].toInt() xor b[i].toInt())
+        }
+        return result == 0
     }
 }
-
-private val Context.dataStore by preferencesDataStore(name = "encryption_prefs")
-private val Context.languageDataStore by preferencesDataStore(name = "language_prefs")
 
 

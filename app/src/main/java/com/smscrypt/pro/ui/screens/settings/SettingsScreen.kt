@@ -1,28 +1,24 @@
 package com.smscrypt.pro.ui.screens.settings
 
-import android.Manifest
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
-import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import android.content.pm.PackageManager
-import com.smscrypt.pro.ui.components.AnimatedCard
-import androidx.compose.ui.res.stringResource
 import com.smscrypt.pro.R
 import com.smscrypt.pro.data.preferences.LanguageManager
-import androidx.hilt.navigation.compose.hiltViewModel
-import kotlinx.coroutines.flow.first
-import androidx.compose.runtime.rememberCoroutineScope
-import kotlinx.coroutines.launch
-import javax.inject.Inject
+import com.smscrypt.pro.ui.LocalSmsPermissions
+import com.smscrypt.pro.ui.components.AnimatedCard
+import com.smscrypt.pro.utils.SmsPermissions
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -32,12 +28,14 @@ fun SettingsScreen(
     onNavigateToInfo: () -> Unit
 ) {
     val context = LocalContext.current
-    
+    val smsPermissions = LocalSmsPermissions.current
+    val hasSmsPermissions = smsPermissions.hasAllPermissions
+
     // Neon colors from splash screen
-    val neonPurple = androidx.compose.ui.graphics.Color(0xFFBB00FF)
-    val neonBlue = androidx.compose.ui.graphics.Color(0xFF00F0FF)
-    val neonPink = androidx.compose.ui.graphics.Color(0xFFFF00FF)
-    val neonGreen = androidx.compose.ui.graphics.Color(0xFF00FF88)
+    val neonPurple = Color(0xFFBB00FF)
+    val neonBlue = Color(0xFF00F0FF)
+    val neonPink = Color(0xFFFF00FF)
+    val neonGreen = Color(0xFF00FF88)
     
     // Get current language
     val currentLanguageCode = LanguageManager.getLanguageSync(context)
@@ -120,6 +118,61 @@ fun SettingsScreen(
                     }
                 }
             }
+
+            // SMS Permissions
+            item {
+                AnimatedCard(onClick = {
+                    if (!hasSmsPermissions) smsPermissions.requestPermissions()
+                }) {
+                    Row(
+                        horizontalArrangement = Arrangement.spacedBy(12.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Sms,
+                            contentDescription = null,
+                            tint = if (hasSmsPermissions) neonGreen else MaterialTheme.colorScheme.error,
+                            modifier = Modifier.size(32.dp)
+                        )
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = stringResource(R.string.sms_permissions),
+                                style = MaterialTheme.typography.titleMedium
+                            )
+                            Text(
+                                text = if (hasSmsPermissions) {
+                                    stringResource(R.string.all_permissions_granted)
+                                } else {
+                                    stringResource(R.string.permissions_description)
+                                },
+                                style = MaterialTheme.typography.bodySmall,
+                                color = if (hasSmsPermissions) neonBlue else MaterialTheme.colorScheme.error
+                            )
+                        }
+                    }
+
+                    if (!hasSmsPermissions) {
+                        Spacer(modifier = Modifier.height(12.dp))
+                        Button(
+                            onClick = { smsPermissions.requestPermissions() },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(stringResource(R.string.grant_permissions))
+                        }
+                    } else {
+                        Spacer(modifier = Modifier.height(8.dp))
+                        SmsPermissions.required.forEach { permission ->
+                            val granted = ContextCompat.checkSelfPermission(
+                                context, permission
+                            ) == PackageManager.PERMISSION_GRANTED
+                            PermissionItem(
+                                permission = permission.substringAfterLast('.'),
+                                granted = granted
+                            )
+                        }
+                    }
+                }
+            }
             
             // Language Settings
             item {
@@ -165,8 +218,8 @@ private fun SettingsCard(
     subtitle: String,
     onClick: () -> Unit
 ) {
-    val neonPurple = androidx.compose.ui.graphics.Color(0xFFBB00FF)
-    val neonBlue = androidx.compose.ui.graphics.Color(0xFF00F0FF)
+    val neonPurple = Color(0xFFBB00FF)
+    val neonBlue = Color(0xFF00F0FF)
     
     AnimatedCard(onClick = onClick) {
         Row(
@@ -200,7 +253,7 @@ private fun SettingsCard(
 }
 
 @Composable
-private fun SecurityBadge(label: String, subtitle: String, color: androidx.compose.ui.graphics.Color) {
+private fun SecurityBadge(label: String, subtitle: String, color: Color) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

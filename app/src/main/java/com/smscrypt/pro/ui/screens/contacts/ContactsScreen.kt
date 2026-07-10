@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.smscrypt.pro.data.model.Contact
 import com.smscrypt.pro.ui.components.AnimatedCard
+import com.smscrypt.pro.ui.components.ErrorSnackbarEffect
 import androidx.compose.ui.res.stringResource
 import com.smscrypt.pro.R
 
@@ -30,8 +31,16 @@ fun ContactsScreen(
     viewModel: ContactsViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    ErrorSnackbarEffect(
+        error = uiState.error,
+        snackbarHostState = snackbarHostState,
+        onDismiss = viewModel::clearError
+    )
     
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.contacts)) },
@@ -174,7 +183,7 @@ private fun ContactCard(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = contact.name.first().uppercaseChar().toString(),
+                        text = contact.name.firstOrNull()?.uppercaseChar()?.toString() ?: "?",
                         style = MaterialTheme.typography.titleLarge,
                         color = MaterialTheme.colorScheme.onPrimary
                     )
@@ -302,6 +311,7 @@ private fun AddContactDialog(
                     onValueChange = { password = it },
                     label = { Text(stringResource(R.string.encryption_password)) },
                     singleLine = true,
+                    visualTransformation = PasswordVisualTransformation(),
                     modifier = Modifier.fillMaxWidth()
                 )
                 
@@ -370,6 +380,7 @@ private fun EditContactDialog(
                     onValueChange = { newPassword = it },
                     label = { Text(stringResource(R.string.new_password)) },
                     singleLine = true,
+                    visualTransformation = PasswordVisualTransformation(),
                     modifier = Modifier.fillMaxWidth()
                 )
                 
@@ -416,8 +427,7 @@ private fun DeleteContactConfirmDialog(
         },
         text = {
             Text(
-                text = stringResource(R.string.delete_contact_confirmation)
-                    .replace("%s", contactName)
+                text = stringResource(R.string.delete_contact_confirmation, contactName)
             )
         },
         confirmButton = {

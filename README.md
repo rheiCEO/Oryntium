@@ -14,7 +14,7 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
 [![Min SDK](https://img.shields.io/badge/minSdk-29-green?style=flat-square)](app/build.gradle.kts)
-[![Version](https://img.shields.io/badge/version-1.0.5-blue?style=flat-square)](app/build.gradle.kts)
+[![Version](https://img.shields.io/badge/version-1.0.6-blue?style=flat-square)](app/build.gradle.kts)
 
 [Features](#-features) · [How it works](#-how-it-works) · [Download](#-download) · [Build](#-build-from-source) · [Security](#-security) · [Docs](#-documentation)
 
@@ -174,7 +174,7 @@ Oryntium/
 </td>
 <td>
 
-**ORYNTIUM Debug APK** · v1.0.5 · `com.smscrypt.oryntium`
+**ORYNTIUM Debug APK** · v1.0.6 · `com.smscrypt.oryntium`
 
 [Download app-oryntium-debug.apk](app-oryntium-debug.apk) (~55 MB)
 
@@ -255,8 +255,8 @@ Plaintext + contact password
 ### What is protected
 
 - **In transit (SMS):** ciphertext only — readable with the shared contact password
-- **At rest (device):** contact passwords encrypted with a device-specific key in DataStore
-- **App access:** SHA-256 hashed PIN, brute-force protection with data wipe after 5 failures
+- **At rest (device):** contact passwords encrypted with a device-specific key wrapped in **Android Keystore** (AES-GCM)
+- **App access:** PIN hashed with **PBKDF2-HMAC-SHA256** (120k iterations + salt); full data wipe after 5 failures (DB, Keystore, all prefs)
 - **Screen:** screenshot & screen-recording blocked while app is open
 
 ### Permissions
@@ -266,7 +266,6 @@ Plaintext + contact password
 <uses-permission android:name="android.permission.READ_SMS" />
 <uses-permission android:name="android.permission.RECEIVE_SMS" />
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.READ_CONTACTS" />
 ```
 
 All permissions are used solely for SMS encryption functionality. No analytics, no tracking, no network calls to third parties.

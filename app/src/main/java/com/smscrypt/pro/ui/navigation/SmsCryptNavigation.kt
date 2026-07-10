@@ -123,14 +123,6 @@ fun SmsCryptNavigation(
             )
         }
         
-        composable(Screen.Subscription.route) {
-            SubscriptionPlanScreen(
-                onNavigateBack = {
-                    navController.popBackStack()
-                }
-            )
-        }
-        
         composable(Screen.Info.route) {
             InfoScreen(
                 onNavigateBack = {

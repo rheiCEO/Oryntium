@@ -1,6 +1,7 @@
 # Built application files
 *.apk
 !app-oryntium-debug.apk
+!app-oryntium-release.apk
 *.aar
 *.ap_
 *.aab
